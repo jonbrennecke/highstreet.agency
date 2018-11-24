@@ -89,12 +89,13 @@ export default function Head({ schema, title, description, url }: Props) {
 
       <meta name="rating" content="General" />
       <meta name="subject" content="education" />
+      
 
       {/* TODO: <!-- Links to information about the author(s) of the document -->
-      <link rel="author" href="http://mathhacks.co/humans.txt">
+      <link rel="author" href={`${url}/humans.txt`}>
 
       <!-- TODO: Refers to a copyright statement that applies to the link's context -->
-      <link rel="license" href="http://mathhacks.co/copyright"> */}
+      <link rel="license" href={`${url}/copyright`}> */}
 
       {/* Facebook Open Graph - http://ogp.me/ */}
       {/* TODO: <meta property="fb:app_id" content="186638215372469" /> */}
@@ -103,7 +104,7 @@ export default function Head({ schema, title, description, url }: Props) {
       <meta property="og:title" content={title} />
       <meta
         property="og:image"
-        content={`http://mathhacks.co/${PUBLIC_PATH}/og_image.png`}
+        content={`${url}/${PUBLIC_PATH}/og_image.png`}
       />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={title} />

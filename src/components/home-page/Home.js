@@ -28,9 +28,9 @@ export default class Home extends Component<Props, {}> {
       <div className="app-container homepage">
         <Seo
           pageType={SEO_PAGE_TYPE.WEBPAGE}
-          title="Jon Brennecke"
-          description="Jon Brennecke"
-          url="http://jonbrennecke.com"
+          title="High Street"
+          description="High Street"
+          url="http://highstreet.agency"
         />
         <Header />
         <Footer />
