@@ -1,0 +1,99 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+@import "../../styles/media";
+
+.services {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 40vh;
+  position: relative;
+  max-width: 700px; 
+
+  @include desktop-extra-wide-landscape {
+    margin-top: 800px;
+  }
+
+  .services-container {
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: left;
+
+    h1 {
+      font-family: $tajawal-light-font-family;
+      font-size: $h1-default-font-size;
+      color: $theme-medium-blue;
+      border-bottom: 9px solid $theme-medium-blue;
+      display: inline;
+
+      @include iphone-x-portrait {
+        font-size: $h1-mobile-font-size;
+      }
+
+      @include iphone-portrait {
+        font-size: $h1-mobile-font-size;
+      }
+    }
+  }
+
+  .services-list {
+    padding-left: 0;
+    margin: 15px 0 0 0;
+  }
+
+  .services-list-item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 45px 0;
+
+    .services-list-item-icon {
+      height: 100px;
+      width: 100px;
+    }
+
+    .services-list-item-text {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 45px;
+    }
+    
+    h3 {
+      font-family: $tajawal-light-font-family;
+      font-size: $h3-default-font-size;
+      color: $theme-medium-blue;
+      margin: 0;
+    }
+
+    p {
+      font-family: $tajawal-medium-font-family;
+      font-size: $paragraph-default-font-size;
+      color: rgba($theme-medium-blue, 0.52);
+      margin: 0;
+    }
+
+    @include iphone-x-portrait {
+      flex-direction: column;
+
+      & .services-list-item-text {
+        margin-left: 0 !important;
+        margin-top: 15px;
+      }
+    }
+
+    @include iphone-portrait {
+      flex-direction: column;
+
+      & .services-list-item-text {
+        margin-left: 0 !important;
+        margin-top: 15px;
+      }
+    }
+  }
+}

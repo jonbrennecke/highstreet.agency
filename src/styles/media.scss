@@ -1,0 +1,173 @@
+$DEVICES: (
+  ipad: (
+    device-width: (
+      min: 768px,
+      max: 1024px,
+    )
+  ),
+  iphone: (
+    device-width: (
+      min: 375px,
+      max: 667px,
+    ),
+  ),
+  iphone-x: (
+    device-width: (
+      min: 375px,
+    ),
+    device-height: (
+      max: 812px
+    )
+  )
+);
+
+// equation: eq, lte, gte, gt, lt
+@mixin respond-to($device-name, $orientation, $equation: 'eq') {
+  $device: map-get($DEVICES, $device-name);
+  $device-min: get-device-min($device);
+  $device-max: get-device-max($device);
+  $device-pixel-ratio: map-get($device, 'device-pixel-ratio');
+  @if $equation == 'eq' {
+    @include build-media-query($device-min, $device-max, $device-pixel-ratio, $orientation, $device-name) {
+      @content;
+    }
+  }
+  @else if $equation == 'gt' {
+    @include build-media-query($device-max, null, $device-pixel-ratio, $orientation, $device-name) {
+      @content;
+    }
+  }
+  @else if $equation == 'gte' {
+    @include build-media-query($device-min, null, $device-pixel-ratio, $orientation, $device-name) {
+      @content;
+    }
+  }
+  @else if $equation == 'lt' {
+    @include build-media-query(null, $device-min, $device-pixel-ratio, $orientation, $device-name) {
+      @content;
+    }
+  }
+  @else if $equation == 'lte' {
+    @include build-media-query(null, $device-max, $device-pixel-ratio, $orientation, $device-name) {
+      @content;
+    }
+  }
+  @else {
+    @warn "WARNING: invalid parameters passed to 'respond-to(#{$device-name}, #{$orientation}, #{$equation})'";
+  }
+}
+
+@function get-device-min($device) {
+  $has-height: map-has-key($device, "device-height");
+  $has-width: map-has-key($device, "device-width");
+  $device-height: if($has-height, map-get($device, "device-height"), null);
+  $device-width: if($has-width, map-get($device, "device-width"), null);
+  $ret: ();
+  @if $device-height {
+    $min: map-get($device-height, "min");
+    $ret: map-merge($ret, (height: $min));
+  }
+  @if $device-width {
+    $min: map-get($device-width, "min");
+    $ret: map-merge($ret, (width: $min));
+  }
+  @return $ret;
+}
+
+@function get-device-max($device) {
+  $has-height: map-has-key($device, "device-height");
+  $has-width: map-has-key($device, "device-width");
+  $device-height: if($has-height, map-get($device, "device-height"), null);
+  $device-width: if($has-width, map-get($device, "device-width"), null);
+  $ret: ();
+  @if $device-height {
+    $max: map-get($device-height, "max");
+    $ret: map-merge($ret, (height: $max));
+  }
+  @if $device-width {
+    $max: map-get($device-width, "max");
+    $ret: map-merge($ret, (width: $max));
+  }
+  @return $ret;
+}
+
+@mixin build-media-query($device-min, $device-max, $device-pixel-ratio, $orientation, $device-name) {
+  $media-query-parts: build-media-query-from-parts(
+    "only screen",
+    get-min-query($device-min),
+    get-max-query($device-max),
+    get-device-pixel-ratio-query($device-pixel-ratio),
+    get-orientation-query($orientation)
+  );
+  @media #{$media-query-parts} {
+    @content;
+  }
+}
+
+@function build-media-query-from-parts($parts...) {
+  $ret: "";
+  @for $i from 1 through length($parts) {
+    $part: nth($parts, $i);
+    @if $part and $part != "" {
+      @if $i > 1 {
+        $ret: "#{$ret} and ";
+      }
+      @if type-of($part) == "string" {
+        $ret: "#{$ret}#{$part}";
+      }
+    }
+  }
+  @return $ret;
+}
+
+@function get-min-query($min) {
+  @if not $min {
+    @return null;
+  }
+  $has-height: map-has-key($min, "height");
+  $has-width: map-has-key($min, "width");
+  $width-query: "";
+  $height-query: "";
+  @if $has-height {
+    $height: map-get($min, 'height');
+    $height-query: if($height, "(min-device-height: #{$height})", null);
+  }
+  @if $has-width {
+    $width: map-get($min, 'width');
+    $width-query: if($width, "(min-device-width: #{$width})", null);
+  }
+  @return join-list(($height-query, $width-query), " and ");
+}
+
+@function get-max-query($max) {
+  @if not $max {
+    @return null;
+  }
+  $has-height: map-has-key($max, "height");
+  $has-width: map-has-key($max, "width");
+  $width-query: "";
+  $height-query: "";
+  @if $has-height {
+    $height: map-get($max, 'height');
+    $height-query: if($height, "(max-device-height: #{$height})", null);
+  }
+  @if $has-width {
+    $width: map-get($max, 'width');
+    $width-query: if($width, "(max-device-width: #{$width})", null);
+  }
+  @return join-list(($height-query, $width-query), " and ");
+}
+
+@function get-device-pixel-ratio-query($device-pixel-ratio) {
+  @if $device-pixel-ratio {
+    @return "(-webkit-device-pixel-ratio: #{$device-pixel-ratio})";
+  }
+  @return "";
+}
+
+@function get-orientation-query($orientation) {
+  @if $orientation {
+    @return "(orientation: #{$orientation})";
+  }
+  @return "";
+}
