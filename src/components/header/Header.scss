@@ -9,10 +9,11 @@
   padding: 45px;
 
   .call-to-action {
-    font-family: $source-sans-pro-font-family;
-    font-weight: bold;
-    font-size: 30pt;
     color: $theme-white;
+
+    &::selection {
+      background-color: $theme-medium-blue;
+    }
   }
 
   .call-to-action-button {
