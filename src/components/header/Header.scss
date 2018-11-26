@@ -2,11 +2,15 @@
 @import "../../styles/fonts";
 
 .header {
-  background-color: $theme-medium-blue;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 45px;
+
+  .header-inner {
+    position: relative;
+    z-index: 3;
+  }
 
   .call-to-action {
     color: $theme-white;

@@ -6,6 +6,7 @@ import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
 import NavLogo from '../nav-logo/NavLogo';
 import Button from '../button/Button';
 import Headline from '../headline/Headline';
+import HeaderBackground from '../header-background/HeaderBackground';
 
 // $FlowFixMe
 import './Header.scss';
@@ -20,6 +21,7 @@ type Props = {
 export default function Header({ className, analytics }: Props) {
   return (
     <header className={classnames('header', className)}>
+      <HeaderBackground />
       <ContentMaxWidth className="header-inner">
         <NavLogo />
         <Headline
