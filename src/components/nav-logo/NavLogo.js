@@ -26,6 +26,7 @@ export default function NavLogo({ className }: Props) {
         strokeWidth="1"
         fill="none"
         fillRule="evenodd"
+        transform="scale(0.8)"
       >
         <g
           id="Home-page"
