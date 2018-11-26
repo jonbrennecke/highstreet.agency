@@ -3,6 +3,10 @@
 
 .header {
   background-color: $theme-medium-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
 
   .call-to-action {
     font-family: $source-sans-pro-font-family;
