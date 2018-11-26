@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   padding: 45px;
+  position: relative;
+  z-index: 3;
 
   .process-inner {
     display: flex;
