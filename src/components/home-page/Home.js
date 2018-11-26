@@ -17,9 +17,8 @@ type Props = {
 
 // $FlowFixMe
 @pageview(Analytics.CategoryEnum.HomePage, 'Home page view')
-export default class Home extends Component<Props, {}> {
+export default class Home extends Component<Props> {
   props: Props;
-  state = {};
 
   render() {
     return (
