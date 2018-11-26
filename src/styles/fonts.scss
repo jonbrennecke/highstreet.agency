@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('assets/fonts/SourceSansPro/SourceSansPro-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('assets/fonts/WorkSans/WorkSans-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('assets/fonts/WorkSans/WorkSans-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bolder;
+}
+
+$source-sans-pro-font-family: 'Source Sans Pro';
+$work-sans-font-family: 'Work Sans';

@@ -89,7 +89,6 @@ export default function Head({ schema, title, description, url }: Props) {
 
       <meta name="rating" content="General" />
       <meta name="subject" content="education" />
-      
 
       {/* TODO: <!-- Links to information about the author(s) of the document -->
       <link rel="author" href={`${url}/humans.txt`}>

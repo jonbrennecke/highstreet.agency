@@ -1,0 +1,20 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.header {
+  background-color: $theme-medium-blue;
+
+  .call-to-action {
+    font-family: $source-sans-pro-font-family;
+    color: $theme-white;
+  }
+
+  .call-to-action-button {
+    width: 275px;
+    border-radius: 38px;
+    background-color: $theme-white;
+    font-family: $source-sans-pro-font-family;
+    font-size: 15pt;
+    color: $theme-medium-blue;
+  }
+}

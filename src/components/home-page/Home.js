@@ -1,7 +1,7 @@
 /* @flow */
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
-import * as GoogleAnalytics from '../../utils/GoogleAnalytics';
+import * as Analytics from '../../utils/Analytics';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import { SEO_PAGE_TYPE } from '../../constants';
@@ -14,27 +14,29 @@ import './Home.scss';
 export default class Home extends Component<Props, {}> {
   props: Props;
   state = {};
+  pageAnalytics: Analytics.PageAnalytics = new Analytics.PageAnalytics(
+    Analytics.CategoryEnum.HomePage
+  );
 
+  // TODO wrap this in a decorator
   async componentDidMount() {
-    await GoogleAnalytics.trackEvent({
-      category: GoogleAnalytics.CategoryEnum.HomePage,
-      action: GoogleAnalytics.ActionEnum.PageView,
-      label: 'Home Page View',
-    });
+    await this.pageAnalytics.trackPageView('Home Page View');
   }
 
   render() {
     return (
-      <div className="app-container homepage">
+      <Fragment>
         <Seo
           pageType={SEO_PAGE_TYPE.WEBPAGE}
           title="High Street"
           description="High Street"
           url="http://highstreet.agency"
         />
-        <Header />
+        {/* <Layout>
+        </Layout> */}
+        <Header analytics={this.pageAnalytics} />
         <Footer />
-      </div>
+      </Fragment>
     );
   }
 }

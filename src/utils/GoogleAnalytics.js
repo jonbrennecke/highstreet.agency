@@ -30,12 +30,10 @@ export const ActionEnum = {
   Timing: 'timing',
 };
 
-export type TrackingEvent = {
+export type ActionDetails = {
   category: $Values<typeof CategoryEnum>,
   action: $Values<typeof ActionEnum>,
   label: ?string,
-
-  // Optional fields
   value?: ?number,
 };
 
@@ -43,23 +41,26 @@ export function getUserAgent(): string {
   return window.navigator.userAgent;
 }
 
-export const trackEvent = async (event: TrackingEvent) => {
+export const trackAction = async (details: ActionDetails) => {
   const query: { [key: string]: string | number } = _.omitBy(
     {
       v: GOOGLE_ANALYTICS_PARAMS.API_VERSION,
       tid: GOOGLE_ANALYTICS_PARAMS.TRACKING_ID,
-      t: event.action,
-      ec: event.category,
-      ea: event.action,
-      el: event.label,
-      ev: event.value,
+      t: details.action,
+      ec: details.category,
+      ea: details.action,
+      el: details.label,
+      ev: details.value,
       ds: 'web',
+
+      // TODO
       an: 'MathHacks',
       aid: 'com.jonbrennecke.mathhacksweb',
+
       ua: getUserAgent(),
       uid: Tracking.getBrowserFingerprint(),
       av: APP_VERSION,
-      cd: event.category,
+      cd: details.category,
       dr: document.referrer,
       cd1: window.location.hostname,
       cd2: APP_VERSION,
@@ -75,10 +76,10 @@ export const trackEvent = async (event: TrackingEvent) => {
       const json = await res.json();
       Debug.log(JSON.stringify(json, null, 2));
     }
-    Debug.log(`Successfully tracked event: ${event.label || ''}.`);
+    Debug.log(`Successfully tracked action: ${details.label || ''}.`);
     return;
   }
-  Debug.logErrorMessage(`Failed to track event. Error code ${res.status}.`);
+  Debug.logErrorMessage(`Failed to track action. Error code ${res.status}.`);
   if (DEBUG) {
     const json = await res.json();
     Debug.log(JSON.stringify(json, null, 2));

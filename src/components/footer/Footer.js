@@ -15,8 +15,7 @@ export default function Footer({ className }: Props) {
   return (
     <footer className={classnames('footer', className)}>
       <div className="footer-contents-wrap">
-        <ContentMaxWidth className="footer-contents">
-        </ContentMaxWidth>
+        <ContentMaxWidth className="footer-contents" />
       </div>
     </footer>
   );
