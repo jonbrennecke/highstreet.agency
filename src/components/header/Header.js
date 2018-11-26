@@ -9,11 +9,11 @@ import Button from '../button/Button';
 // $FlowFixMe
 import './Header.scss';
 
-import type { PageAnalytics } from '../../utils/Analytics';
+import type { Analytics } from '../../utils/Analytics';
 
 type Props = {
   className?: ?string,
-  analytics: PageAnalytics,
+  analytics: Analytics,
 };
 
 export default function Header({ className, analytics }: Props) {

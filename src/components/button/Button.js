@@ -5,10 +5,10 @@ import classnames from 'classnames';
 // $FlowFixMe
 import './Button.scss';
 
-import type { PageAnalytics } from '../../utils/Analytics';
+import type { Analytics } from '../../utils/Analytics';
 
 type Props = {
-  analytics: PageAnalytics,
+  analytics: Analytics,
   className?: ?string,
   id?: ?string,
   name: string,
@@ -37,11 +37,14 @@ export default function Button({
   );
 }
 
-async function trackClick(
-  analytics: PageAnalytics,
+const trackClick = (
+  analytics: Analytics,
   label: string,
   callback: () => void
-) {
-  await analytics.trackEvent(`Button Click: ${label}`);
-  callback();
-}
+): (() => void) => {
+  return () => {
+    Promise.resolve(analytics.trackEvent(`Button click: ${label}`)).then(
+      callback
+    );
+  };
+};

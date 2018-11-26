@@ -10,7 +10,7 @@ type ActionDetails = {
   value?: ?number,
 };
 
-interface Analytics {
+export interface Analytics {
   +trackAction: (event: ActionDetails) => Promise<void>;
   +trackPageView: (label: string, value?: ?number) => Promise<void>;
   +trackEvent: (label: string, value?: ?number) => Promise<void>;

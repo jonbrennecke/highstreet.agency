@@ -2,6 +2,7 @@
 import React, { Component, Fragment } from 'react';
 
 import * as Analytics from '../../utils/Analytics';
+import { pageview } from '../../utils/AnalyticsUI';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import { SEO_PAGE_TYPE } from '../../constants';
@@ -10,18 +11,15 @@ import Seo from '../seo/Seo';
 // $FlowFixMe
 import './Home.scss';
 
+type Props = {
+  analytics: Analytics.Analytics,
+};
+
 // $FlowFixMe
+@pageview(Analytics.CategoryEnum.HomePage, 'Home page view')
 export default class Home extends Component<Props, {}> {
   props: Props;
   state = {};
-  pageAnalytics: Analytics.PageAnalytics = new Analytics.PageAnalytics(
-    Analytics.CategoryEnum.HomePage
-  );
-
-  // TODO wrap this in a decorator
-  async componentDidMount() {
-    await this.pageAnalytics.trackPageView('Home Page View');
-  }
 
   render() {
     return (
@@ -34,7 +32,7 @@ export default class Home extends Component<Props, {}> {
         />
         {/* <Layout>
         </Layout> */}
-        <Header analytics={this.pageAnalytics} />
+        <Header analytics={this.props.analytics} />
         <Footer />
       </Fragment>
     );
