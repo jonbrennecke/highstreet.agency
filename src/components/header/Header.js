@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
 import NavLogo from '../nav-logo/NavLogo';
 import Button from '../button/Button';
+import Headline from '../headline/Headline';
 
 // $FlowFixMe
 import './Header.scss';
@@ -21,16 +22,17 @@ export default function Header({ className, analytics }: Props) {
     <header className={classnames('header', className)}>
       <ContentMaxWidth className="logo-container">
         <NavLogo />
-        <p className="call-to-action">
-          We connect startups with mobile audiences
-        </p>
+        <Headline
+          className="call-to-action"
+          text="We connect startups with mobile audiences"
+        />
         <Button
           analytics={analytics}
           className="call-to-action-button"
           name="Hero call-to-action button"
           text="Work with us"
           onClick={() => {
-            // TODO
+            // TODO animate page transition to /projects
           }}
         />
       </ContentMaxWidth>

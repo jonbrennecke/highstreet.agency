@@ -6,11 +6,14 @@
 
   .call-to-action {
     font-family: $source-sans-pro-font-family;
+    font-weight: bold;
+    font-size: 30pt;
     color: $theme-white;
   }
 
   .call-to-action-button {
-    width: 275px;
+    width: 206px;
+    height: 57px;
     border-radius: 38px;
     background-color: $theme-white;
     font-family: $source-sans-pro-font-family;
