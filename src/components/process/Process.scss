@@ -1,0 +1,44 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.process {
+  background-color: $theme-extra-light-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+
+  .process-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+  }
+
+  .subtitle {
+    color: $theme-medium-purple;
+    text-align: center;
+
+    &::selection {
+      background-color: $theme-dark-purple;
+      color: $theme-extra-light-blue;
+    }
+  }
+
+  .call-to-action-button {
+    margin-top: 45px;
+    width: 260px;
+    height: 57px;
+    border-radius: 38px;
+    background-color: $theme-medium-magenta;
+    font-family: $source-sans-pro-font-family;
+    font-size: 15pt;
+    color: $theme-white;
+    box-shadow: 0px 5px 35px 0px rgba($theme-dark-purple, 0);
+    transition: 300ms box-shadow ease-in-out;
+
+    &:active, &:focus, &:hover {
+      box-shadow: 0px 5px 35px 0px rgba($theme-dark-purple, 0.15);
+    }
+  }
+}

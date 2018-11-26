@@ -20,7 +20,7 @@ type Props = {
 export default function Header({ className, analytics }: Props) {
   return (
     <header className={classnames('header', className)}>
-      <ContentMaxWidth className="logo-container">
+      <ContentMaxWidth className="header-inner">
         <NavLogo />
         <Headline
           className="call-to-action"
@@ -32,7 +32,7 @@ export default function Header({ className, analytics }: Props) {
           name="Hero call-to-action button"
           text="Work with us"
           onClick={() => {
-            // TODO animate page transition to /projects
+            // TODO animate page transition to /contact
           }}
         />
       </ContentMaxWidth>
