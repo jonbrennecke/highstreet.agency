@@ -10,6 +10,10 @@
     // top: -250px;
   }
 
+  svg {
+    overflow: visible;
+  }
+
   svg.svg-first {
     position: absolute;
     top: 0;
