@@ -1,5 +1,37 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+$easing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+@keyframes mouse-outline-background { 
+  0% { 
+    background-position: 0% -100%;
+    transform: translateY(0px);
+  }
+  100% {
+    background-position: 0% 200%;
+    transform: translateY(5px);
+  }
+}
+
+@keyframes mouse-wheel {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    border-color: $theme-medium-blue;
+  }
+  100% {
+    transform: translateY(5px) scale(0.8);
+    border-color: $theme-light-blue;
+  }
+}
+
 .scroll-indicator {
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 300ms ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
   &.visible {
     opacity: 1;
@@ -7,5 +39,67 @@
 
   &:not(.visible) {
     opacity: 0;
+  }
+
+  &.animated {
+    #mouse-outline {
+      animation: mouse-outline-background 1200ms $easing infinite alternate;
+    }
+    #mouse-wheel {
+      animation: mouse-wheel 1200ms $easing infinite alternate;
+    }
+  }
+
+  .scroll-text {
+    font-family: $source-sans-pro-font-family;
+    font-weight: lighter;
+    font-size: 12pt;
+    letter-spacing: 2px;
+    color: $theme-medium-blue;
+  }
+
+  #mouse-outline {
+    position: relative;
+    width: 32px;
+    height: 50px;
+    border-radius: 23px;
+    background-size: 100% 200%;
+    background-color: $theme-medium-blue;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 0%,
+        transparent 40%,
+        $theme-light-blue 40%,
+        $theme-light-blue 60%,
+        transparent 60%,
+        transparent 100%
+      );
+    background-repeat: no-repeat;
+    
+    &::after {
+      $thickness: 3px;
+      position: absolute;
+      top: $thickness;
+      left: $thickness;
+      bottom: $thickness;
+      right: $thickness;
+      border-radius: 23px;
+      content: '';
+      background-color: $theme-extra-light-blue;
+    }
+  }
+
+  #mouse-wheel {
+    position: relative;
+    z-index: 1;
+    width: 0px;
+    height: 2.89px;
+    border-color: $theme-medium-blue;
+    border-radius: 23px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 0 auto;
+    top: 9px;
   }
 }
