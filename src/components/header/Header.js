@@ -3,10 +3,10 @@ import React from 'react';
 import classnames from 'classnames';
 
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
-import NavLogo from '../nav-logo/NavLogo';
 import CallToActionButton from '../call-to-action-button/CallToActionButton';
 import Headline from '../headline/Headline';
 import HeaderBackground from '../header-background/HeaderBackground';
+import Navigation from '../navigation/Navigation';
 
 // $FlowFixMe
 import './Header.scss';
@@ -23,7 +23,7 @@ export default function Header({ className, analytics }: Props) {
     <header className={classnames('header', className)}>
       <HeaderBackground />
       <ContentMaxWidth className="header-inner">
-        <NavLogo />
+        <Navigation />
         <Headline
           className="call-to-action"
           text="We connect startups with mobile audiences"

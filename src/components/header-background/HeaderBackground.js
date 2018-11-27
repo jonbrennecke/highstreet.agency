@@ -23,10 +23,16 @@ export default class HeaderBackground extends Component<Props, {}> {
           xlinkHref="http://www.w3.org/1999/xlink"
         >
           <defs>
-              <linearGradient x1="50%" y1="2.26923772%" x2="50%" y2="97.5117413%" id="linearGradient-1">
-                  <stop stopColor="#697FFC" offset="0%"></stop>
-                  <stop stopColor="#4259D9" offset="100%"></stop>
-              </linearGradient>
+            <linearGradient
+              x1="50%"
+              y1="2.26923772%"
+              x2="50%"
+              y2="97.5117413%"
+              id="linearGradient-1"
+            >
+              <stop stopColor="#697FFC" offset="0%" />
+              <stop stopColor="#4259D9" offset="100%" />
+            </linearGradient>
           </defs>
           <g
             id="Website-Marketting-Page"
