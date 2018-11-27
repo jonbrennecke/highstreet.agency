@@ -21,14 +21,15 @@
     text-align: center;
 
     &::selection {
-      background-color: $theme-dark-purple;
-      color: $theme-extra-light-blue;
+      background-color: $theme-light-blue;
+      color: $theme-medium-blue;
     }
   }
 
   .call-to-action-button {
     background-color: $theme-medium-magenta;
     color: #fff;
+    margin-top: 45px;
   }
 
   .scroll-indicator {
