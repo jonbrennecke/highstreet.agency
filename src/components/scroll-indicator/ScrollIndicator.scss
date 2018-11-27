@@ -1,0 +1,11 @@
+.scroll-indicator {
+  transition: opacity 500ms ease-in-out;
+  
+  &.visible {
+    opacity: 1;
+  }
+
+  &:not(.visible) {
+    opacity: 0;
+  }
+}

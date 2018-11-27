@@ -42,4 +42,17 @@
       box-shadow: 0px 5px 35px 0px rgba($theme-dark-purple, 0.35);
     }
   }
+
+  .scroll-indicator {
+    position: fixed;
+    bottom: 45px;
+  }
+
+  .below-scroll-content {
+    margin-top: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
