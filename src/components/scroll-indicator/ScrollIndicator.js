@@ -12,6 +12,7 @@ type Props = {
 
 type State = {
   isVisible: boolean,
+  pageYOffset: number,
 };
 
 // $FlowFixMe
@@ -19,6 +20,7 @@ type State = {
 export default class ScrollIndicator extends Component<Props, State> {
   state = {
     isVisible: true,
+    pageYOffset: 0,
   };
 
   componentDidMount() {
@@ -36,21 +38,31 @@ export default class ScrollIndicator extends Component<Props, State> {
   }
 
   onScroll() {
-    if (window.pageYOffset > 45) {
+    if (window.pageYOffset > 100) {
       this.setState({
-        isVisible: false
+        isVisible: false,
+        pageYOffset: window.pageYOffset,
       });
-    }
-    else {
+    } else {
       this.setState({
-        isVisible: true
+        isVisible: true,
+        pageYOffset: window.pageYOffset,
       });
     }
   }
 
   render() {
     return (
-      <div className={classnames('scroll-indicator', this.props.className, this.state.isVisible && 'visible')}>
+      <div
+        className={classnames(
+          'scroll-indicator',
+          this.props.className,
+          this.state.isVisible && 'visible'
+        )}
+        style={{
+          marginBottom: this.state.pageYOffset / 2
+        }}
+      >
         <svg
           width="46px"
           height="72px"
