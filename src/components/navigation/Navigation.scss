@@ -1,0 +1,36 @@
+@import "../../styles/fonts";
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-logo {
+    display: flex;
+    margin-top: 45px;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    font-family: $source-sans-pro-font-family;
+    font-weight: lighter;
+    font-size: 12pt;
+    color: #fff;
+    text-decoration: none;
+    padding: 45px 20px 0 20px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    border-top-width: 4px;
+
+    &.active {
+      font-weight: bold;;
+      border-top-color: #fff;
+    }
+  }
+}
