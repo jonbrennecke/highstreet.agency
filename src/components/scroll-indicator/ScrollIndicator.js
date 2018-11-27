@@ -61,11 +61,11 @@ export default class ScrollIndicator extends Component<Props, State> {
           'animated' // TODO
         )}
         style={{
-          marginBottom: this.state.pageYOffset / 2
+          marginBottom: this.state.pageYOffset / 2,
         }}
       >
         <div id="mouse-outline">
-          <div id="mouse-wheel"/>
+          <div id="mouse-wheel" />
         </div>
         <h1 className="scroll-text">scroll</h1>
       </div>

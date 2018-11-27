@@ -27,20 +27,8 @@
   }
 
   .call-to-action-button {
-    margin-top: 45px;
-    width: 260px;
-    height: 57px;
-    border-radius: 38px;
     background-color: $theme-medium-magenta;
-    font-family: $source-sans-pro-font-family;
-    font-size: 15pt;
-    color: $theme-white;
-    box-shadow: 0px 5px 35px 0px rgba($theme-dark-purple, 0.15);
-    transition: 300ms box-shadow ease-in-out;
-
-    &:active, &:focus, &:hover {
-      box-shadow: 0px 5px 35px 0px rgba($theme-dark-purple, 0.35);
-    }
+    color: #fff;
   }
 
   .scroll-indicator {

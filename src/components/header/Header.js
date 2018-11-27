@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
 import NavLogo from '../nav-logo/NavLogo';
-import Button from '../button/Button';
+import CallToActionButton from '../call-to-action-button/CallToActionButton';
 import Headline from '../headline/Headline';
 import HeaderBackground from '../header-background/HeaderBackground';
 
@@ -28,9 +28,8 @@ export default function Header({ className, analytics }: Props) {
           className="call-to-action"
           text="We connect startups with mobile audiences"
         />
-        <Button
+        <CallToActionButton
           analytics={analytics}
-          className="call-to-action-button"
           name="Hero call-to-action button"
           text="Work with us"
           onClick={() => {
