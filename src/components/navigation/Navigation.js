@@ -1,9 +1,9 @@
 /* @flow */
 import React from 'react';
 import classnames from 'classnames';
-import { NavLink } from 'react-router-dom';
 
 import NavLogo from '../nav-logo/NavLogo';
+import NavigationLink from '../navigation-link/NavigationLink';
 
 // $FlowFixMe
 import './Navigation.scss';
@@ -20,18 +20,30 @@ export default function Navigation({ className, analytics }: Props) {
     <nav className={classnames('navigation', className)}>
       <NavLogo />
       <div className="nav-links">
-        <NavLink to="/" className="nav-link" activeClassName="active">
-          Home
-        </NavLink>
-        <NavLink to="/process" className="nav-link" activeClassName="active">
-          Process
-        </NavLink>
-        <NavLink to="/work" className="nav-link" activeClassName="active">
-          Work
-        </NavLink>
-        <NavLink to="/contact" className="nav-link" activeClassName="active">
-          Contact Us
-        </NavLink>
+        <NavigationLink
+          text="Home"
+          to="/"
+          label="'Home' nav link"
+          analytics={analytics}
+        />
+        <NavigationLink
+          text="Process"
+          to="/process"
+          label="'Process' nav link"
+          analytics={analytics}
+        />
+        <NavigationLink
+          text="Work"
+          to="/work"
+          label="'Work' nav link"
+          analytics={analytics}
+        />
+        <NavigationLink
+          text="Contact"
+          to="/contact"
+          label="'Contact' nav link"
+          analytics={analytics}
+        />
       </div>
     </nav>
   );

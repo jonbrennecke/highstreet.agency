@@ -23,7 +23,7 @@ export default function Header({ className, analytics }: Props) {
     <header className={classnames('header', className)}>
       <HeaderBackground />
       <ContentMaxWidth className="header-inner">
-        <Navigation />
+        <Navigation analytics={analytics} />
         <Headline
           className="call-to-action"
           text="We connect startups with mobile audiences"
