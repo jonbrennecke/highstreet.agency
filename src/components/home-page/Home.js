@@ -5,7 +5,7 @@ import * as Analytics from '../../utils/Analytics';
 import { pageview } from '../../utils/AnalyticsUI';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
-import Process from '../process/Process';
+import Body from '../body/Body';
 import { SEO_PAGE_TYPE } from '../../constants';
 import Seo from '../seo/Seo';
 
@@ -33,7 +33,7 @@ export default class Home extends Component<Props> {
         {/* TODO: <Layout>
         </Layout> */}
         <Header analytics={this.props.analytics} />
-        <Process analytics={this.props.analytics} />
+        <Body analytics={this.props.analytics} />
         <Footer />
       </Fragment>
     );

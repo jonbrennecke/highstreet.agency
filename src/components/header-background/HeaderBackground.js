@@ -115,7 +115,6 @@ export default class HeaderBackground extends Component<Props, State> {
         return point;
       });
     });
-    console.log(translatedPoints);
     const translatedPointStrings = translatedPoints.map(stringifySVGPoints);
     this.setState({
       points: translatedPointStrings,
@@ -185,7 +184,6 @@ export default class HeaderBackground extends Component<Props, State> {
                       id="Rectangle"
                       fill="url(#linearGradient-1)"
                     />
-                    
                   </g>
                 </g>
               </g>
