@@ -21,7 +21,7 @@
 .solutions-section {
   display: flex;
   background: #fff;
-  padding: 100px;
+  padding: 45px 100px;
   border-radius: 6px;
   flex-direction: row;
   position: relative;
@@ -71,11 +71,22 @@
   .description {
     flex-direction: column;
     margin: 0 25px 0 0;
+    justify-content: center;
   }
 
   .figure {
     margin: 0 0 0 25px;
     align-content: center;
     justify-content: center;
+  }
+}
+
+.interfaces-figure {
+  max-width: 446px;
+  max-height: 456px;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
