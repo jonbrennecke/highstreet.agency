@@ -2,7 +2,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import InterfacesArtwork from './InterfacesFigure';
+import InterfaceFigure from './InterfacesFigure';
 
 // $FlowFixMe
 import './Solutions.scss';
@@ -23,9 +23,9 @@ export default function InterfacesSection({ className }: Props) {
         </p>
         <div className="line" />
       </div>
-      <div className="figure">
-        <InterfacesArtwork />
-      </div>
+      <figure className="figure">
+        <InterfaceFigure />
+      </figure>
     </section>
   );
 }

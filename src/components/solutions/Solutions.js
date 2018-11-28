@@ -12,8 +12,8 @@ type Props = {
 export default function Solutions({ className }: Props) {
   return (
     <div className={classnames('solutions', className)}>
-      <InterfacesSection />
-      <APIsSection />
+      <InterfacesSection className="solutions-section" />
+      <APIsSection className="solutions-section" />
     </div>
   );
 }
