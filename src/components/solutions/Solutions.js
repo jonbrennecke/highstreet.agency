@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 import InterfacesSection from './InterfacesSection';
 import APIsSection from './APIsSection';
+import AutomationSection from './AutomationSection';
 
 import type { Analytics } from '../../utils/Analytics';
 
@@ -17,6 +18,7 @@ export default function Solutions({ className, analytics }: Props) {
     <div className={classnames('solutions', className)}>
       <InterfacesSection analytics={analytics} />
       <APIsSection analytics={analytics} />
+      <AutomationSection analytics={analytics} />
     </div>
   );
 }
