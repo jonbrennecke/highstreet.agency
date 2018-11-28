@@ -6,7 +6,7 @@ type Props = {
   className?: ?string,
 };
 
-export default function InterfacesIcon({ className }: Props) {
+export default function InterfacesFigure({ className }: Props) {
   return (
     <div className={classnames('interfaces-icon', className)}>
       <svg
