@@ -5,6 +5,17 @@
 .solutions {
   display: flex;
   flex-direction: column;
+  width: 100%;
+
+  .button {
+    font-family: $source-sans-pro-font-family;
+    font-weight: bold;
+    color: $theme-medium-purple;
+    font-size: 13pt;
+    text-align: left;
+    padding: 0;
+    margin-top: 15px;
+  }
 }
 
 .solutions-section {
@@ -15,6 +26,7 @@
   flex-direction: row;
   position: relative;
   z-index: 1;
+  width: 100%;
 
   &:not(:first-of-type) {
     margin-top: 25px;

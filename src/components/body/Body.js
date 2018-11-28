@@ -41,7 +41,7 @@ export default function Body({ className, analytics }: Props) {
       <section className={classnames('solutions', className)}>
         <BodyBackground />
         <ContentMaxWidth className="solutions-inner">
-          <Solutions/>
+          <Solutions analytics={analytics} />
         </ContentMaxWidth>
       </section>
     </Fragment>

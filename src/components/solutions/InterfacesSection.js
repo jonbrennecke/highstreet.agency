@@ -3,29 +3,28 @@ import React from 'react';
 import classnames from 'classnames';
 
 import InterfaceFigure from './InterfacesFigure';
+import Section from './Section';
 
 // $FlowFixMe
 import './Solutions.scss';
 
+import type { Analytics } from '../../utils/Analytics';
+
 type Props = {
   className?: ?string,
+  analytics: Analytics,
 };
 
-export default function InterfacesSection({ className }: Props) {
+export default function InterfacesSection({ className, analytics }: Props) {
   return (
-    <section className={classnames('interfaces', className)}>
-      <div className="description">
-        <h5 className="uppercase-subtitle">SOLUTIONS</h5>
-        <h1 className="uppercase-title">INTERFACES</h1>
-        <p>
-          We help you reach new audiences with software development for platforms like iOS,
-          Android and web.
-        </p>
-        <div className="line" />
-      </div>
-      <figure className="figure">
-        <InterfaceFigure />
-      </figure>
-    </section>
+    <Section
+      className={classnames('solutions-ui', className)}
+      analytics={analytics}
+      name="Interfaces"
+      title="INTERFACES"
+      text="We help you reach new audiences with software development for platforms like iOS, Android and web."
+      buttonText="See our software development process"
+      renderFigure={() => <InterfaceFigure />}
+    />
   );
 }
