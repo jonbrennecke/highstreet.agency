@@ -15,7 +15,8 @@ export default function Interfaces({ className }: Props) {
   return (
     <section className={classnames('interfaces', className)}>
       <div className="description">
-        <h1>INTERFACES</h1>
+        <h5 className="uppercase-subtitle">SOLUTIONS</h5>
+        <h1 className="uppercase-title">INTERFACES</h1>
         <p>
           We help you reach new audiences with software development for platforms like iOS,
           Android and web.
