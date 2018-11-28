@@ -12,35 +12,31 @@
 
   svg {
     overflow: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
   }
 
   svg.svg-first {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 2;
-    width: 100%;
-    height: auto;
   }
 
   svg.svg-second {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 1;
-    width: 100%;
-    height: auto;
   }
 
   svg.svg-third {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 0;
-    width: 100%;
-    height: auto;
+  }
+
+  svg.svg-fourth {
+    z-index: 0;
+  }
+
+  svg.svg-fifth {
+    z-index: 0;
   }
 }
