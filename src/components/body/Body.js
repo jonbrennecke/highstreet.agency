@@ -10,6 +10,7 @@ import Subtitle from '../subtitle/Subtitle';
 import CallToActionButton from '../call-to-action-button/CallToActionButton';
 import ScrollIndicator from '../scroll-indicator/ScrollIndicator';
 import BodyBackground from '../body-background/BodyBackground';
+import Interfaces from '../interfaces/Interfaces';
 
 import type { Analytics } from '../../utils/Analytics';
 
@@ -40,7 +41,7 @@ export default function Body({ className, analytics }: Props) {
       <section className={classnames('solutions', className)}>
         <BodyBackground />
         <ContentMaxWidth className="solutions-inner">
-          {/* TODO */}
+          <Interfaces />
         </ContentMaxWidth>
       </section>
     </Fragment>
