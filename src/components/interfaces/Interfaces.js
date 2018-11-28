@@ -16,11 +16,14 @@ export default function Interfaces({ className }: Props) {
     <section className={classnames('interfaces', className)}>
       <div className="description">
         <h1>INTERFACES</h1>
-        <p>Reach new audiences with software development for platforms like iOS, Android and web.</p>
+        <p>
+          Reach new audiences with software development for platforms like iOS,
+          Android and web.
+        </p>
         <div className="line" />
       </div>
       <div className="figure">
-        <InterfacesArtwork/>
+        <InterfacesArtwork />
       </div>
     </section>
   );

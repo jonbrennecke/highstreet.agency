@@ -167,11 +167,7 @@ export default function InterfacesIcon({ className }: Props) {
                         id="iPhone"
                         transform="translate(295.000000, 94.500000)"
                       >
-                        <g
-                          id="reflections"
-                          strokeWidth="1"
-                          fillRule="evenodd"
-                        >
+                        <g id="reflections" strokeWidth="1" fillRule="evenodd">
                           <mask id="mask-4" fill="white">
                             <use xlinkHref="#path-3" />
                           </mask>
@@ -211,11 +207,7 @@ export default function InterfacesIcon({ className }: Props) {
                           fill="#FFFFFF"
                           fillRule="nonzero"
                         />
-                        <g
-                          strokeWidth="1"
-                          fillRule="evenodd"
-                          stroke="#4259D9"
-                        >
+                        <g strokeWidth="1" fillRule="evenodd" stroke="#4259D9">
                           <path
                             d="M36.5,194.25 L79,194.25"
                             id="Path-9"
