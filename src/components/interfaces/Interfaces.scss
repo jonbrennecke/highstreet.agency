@@ -1,5 +1,6 @@
 @import "../../styles/fonts";
 @import "../../styles/constants";
+@import "../../styles/text";
 
 .interfaces {
   display: flex;
@@ -29,16 +30,7 @@
   }
 
   p {
-    font-family: $source-sans-pro-font-family;
-    font-weight: lighter;
-    color: $theme-medium-purple;
-    max-width: 350px;
-    font-size: 14pt;
-    line-height: 28px;
-
-    &::selection {
-      background-color: $theme-extra-light-blue;
-    }
+    @include paragraph;
   }
 
   .line {

@@ -1,5 +1,6 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
+@import "../../styles/text";
 
 .process {
   display: flex;
@@ -17,13 +18,9 @@
   }
 
   .subtitle {
-    color: $theme-medium-purple;
+    @include paragraph;
     text-align: center;
-
-    &::selection {
-      background-color: $theme-light-blue;
-      color: $theme-medium-blue;
-    }
+    font-size: 17pt;
   }
 
   .call-to-action-button {
