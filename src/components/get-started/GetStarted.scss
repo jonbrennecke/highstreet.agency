@@ -1,0 +1,57 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+@import "../../styles/text";
+
+.get-started {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 45px 100px;
+  margin-top: 125px;
+  flex-direction: row;
+  
+  .title {
+    color: $theme-medium-purple;
+    margin-bottom: 15px;
+  }
+
+  .paragraph {
+    @include paragraph;
+  }
+
+  .call-to-action {
+    background-color: $theme-medium-magenta;
+    margin-top: 15px;
+  }
+
+  .description, .image {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image {
+    max-width: 408px;
+    max-height: 457px;
+  }
+
+  .description {
+    margin-right: 25px;
+    align-items: flex-start;
+  }
+
+  .image {
+    margin-left: 25px;
+  }
+
+  .founder-feature-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+}

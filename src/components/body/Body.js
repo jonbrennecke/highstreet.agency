@@ -13,6 +13,7 @@ import ScrollIndicator from '../scroll-indicator/ScrollIndicator';
 import BodyBackground from '../body-background/BodyBackground';
 import Solutions from '../solutions/Solutions';
 import DevelopmentSolutionsList from '../development-solutions-list/DevelopmentSolutionsList';
+import GetStarted from '../get-started/GetStarted';
 
 import type { Analytics } from '../../utils/Analytics';
 
@@ -46,6 +47,7 @@ export default function Body({ className, analytics }: Props) {
         <BodyBackground />
         <ContentMaxWidth className="solutions-inner">
           <Solutions analytics={analytics} />
+          <GetStarted analytics={analytics} />
         </ContentMaxWidth>
       </section>
     </Fragment>
