@@ -7,6 +7,7 @@ import './Body.scss';
 
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
 import Subtitle from '../subtitle/Subtitle';
+import Title from '../title/Title';
 import CallToActionButton from '../call-to-action-button/CallToActionButton';
 import ScrollIndicator from '../scroll-indicator/ScrollIndicator';
 import BodyBackground from '../body-background/BodyBackground';
@@ -27,7 +28,8 @@ export default function Body({ className, analytics }: Props) {
         <ContentMaxWidth className="process-inner">
           <ScrollIndicator />
           <div className="below-scroll-content">
-            <Subtitle text="We work with startups, founders and brands to create new experiences for mobile, desktop and beyond." />
+            <Title text="Solutions for today’s businesses"/>
+            <Subtitle text="We work with startups, founders and enterprises to create innovative digital products." />
             <CallToActionButton
               analytics={analytics}
               name="Process call-to-action button"
