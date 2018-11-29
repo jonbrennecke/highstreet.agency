@@ -37,7 +37,7 @@ export default function Section({
         <p>{text}</p>
         <div className="line" />
         <Button
-          className=""
+          className="text-button"
           analytics={analytics}
           name={`Solutions: ${name} - call to action button`}
           text={buttonText}

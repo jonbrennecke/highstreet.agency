@@ -28,7 +28,7 @@ export default function Body({ className, analytics }: Props) {
         <ContentMaxWidth className="process-inner">
           <ScrollIndicator />
           <div className="below-scroll-content">
-            <Title text="Solutions for today’s businesses"/>
+            <Title text="Solutions for today’s businesses" />
             <Subtitle text="We work with startups, founders and enterprises to create innovative digital products." />
             <CallToActionButton
               analytics={analytics}
