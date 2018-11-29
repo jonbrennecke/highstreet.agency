@@ -14,8 +14,8 @@ export default function BodyBackground({ className }: Props) {
     <svg
       className={classnames('body-background', className)}
       width="1440px"
-      height="1342px"
-      viewBox="0 0 1440 1342"
+      height="2190px"
+      viewBox="0 0 1440 2190"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -54,6 +54,16 @@ export default function BodyBackground({ className }: Props) {
           transform="translate(0.000000, -1440.000000)"
           fillRule="nonzero"
         >
+          <g
+            id="Group-10"
+            transform="translate(0.000000, 1329.000000)"
+            fill="#E3E7FE"
+          >
+            <path
+              d="M2,1156 L1440,1151 L1440,2288.56762 C1135.42017,2334.28817 886.668964,2253.9044 693.746382,2047.41634 C500.8238,1840.92827 270.572019,1729.02229 2.99104066,1711.69841 L2,1156 Z"
+              id="Rectangle"
+            />
+          </g>
           <path
             d="M1440,1867.02323 C1246.99532,1990.16995 1067.32866,2034.31895 901,1999.47024 C651.507016,1947.19718 597.984375,1739.97398 378.4375,1709.75762 C232.072917,1689.61338 105.927083,1671.68574 4.70734562e-14,1655.97471 L0,1573 C101.197917,1629.07924 224.979167,1665.6352 371.34375,1682.66787 C590.890625,1708.21688 651.327328,1863.90976 900.820313,1908.1085 C1067.14897,1937.57433 1246.87553,1901.28878 1440,1799.25186 L1440,1867.02323 Z"
             id="Path"

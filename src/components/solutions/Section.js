@@ -48,7 +48,9 @@ export default function Section({
       />
     </div>
   );
-  const Figure = () => <figure className="section-side figure">{renderFigure()}</figure>;
+  const Figure = () => (
+    <figure className="section-side figure">{renderFigure()}</figure>
+  );
   return (
     <section
       className={classnames(
