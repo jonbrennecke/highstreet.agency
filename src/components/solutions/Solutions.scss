@@ -32,19 +32,23 @@
     margin-top: 15px;
   }
 
-  .uppercase-title, .uppercase-subtitle {
+  .title, .subtitle {
     font-family: $work-sans-font-family;
     font-weight: bold;
     letter-spacing: 2.8pt;
   }
 
-  .uppercase-title {
+  .title {
     margin-top: 0;
     color: $theme-medium-blue;
     font-size: 18pt;
   }
 
-  .uppercase-subtitle {
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .subtitle {
     margin: 0 0 10px 0;
     color: $theme-light-purple;
     font-size: 9pt;
@@ -53,6 +57,10 @@
   p {
     @include paragraph;
     padding-top: 0;
+  }
+
+  figure {
+    margin: 0;
   }
 
   .line {
@@ -68,35 +76,48 @@
     width: 50%;
   }
 
-  .description {
-    flex-direction: column;
-    margin: 0 25px 0 0;
-    justify-content: center;
+  .section-side {
+    &:first-child {
+      margin: 0 25px 0 0;
+    }
+
+    &:nth-child(2) {
+      margin: 0 0 0 25px;
+    }
   }
 
-  .figure {
-    margin: 0 0 0 25px;
+  .description {
+    flex-direction: column;
+  }
+
+  .figure, .description {
     align-content: center;
     justify-content: center;
   }
-}
 
-.interfaces-figure {
-  max-width: 446px;
-  max-height: 456px;
+  .interfaces-figure {
+    max-width: 446px;
+    max-height: 456px;
 
-  img {
-    width: 100%;
-    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
-}
 
-.automation-image {
-  max-width: 442px;
-  max-height: 442px;
+  .automation-image {
+    max-width: 442px;
+    max-height: 442px;
 
-  img {
-    width: 100%;
-    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.solutions-automation {
+    .title, .text-button {
+      color: $theme-medium-magenta;
+    }
   }
 }

@@ -29,6 +29,7 @@ export default function Solutions({ className, analytics }: Props) {
       <Feature analytics={analytics} />
       <Section
         className={classnames('solutions-automation', className)}
+        isReversed={true}
         analytics={analytics}
         name="Automation"
         title="AUTOMATION"
