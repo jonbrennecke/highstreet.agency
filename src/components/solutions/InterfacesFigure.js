@@ -13,7 +13,7 @@ type Props = {
 
 export default function InterfacesFigure({ className }: Props) {
   return (
-    <div className={classnames('interfaces-figure', className)}>      
+    <div className={classnames('interfaces-figure', className)}>
       <img src={InterfacesFigureImage} className="image" />
     </div>
   );
