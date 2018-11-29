@@ -11,6 +11,7 @@ import CallToActionButton from '../call-to-action-button/CallToActionButton';
 import ScrollIndicator from '../scroll-indicator/ScrollIndicator';
 import BodyBackground from '../body-background/BodyBackground';
 import Solutions from '../solutions/Solutions';
+import DevelopmentSolutionsList from '../development-solutions-list/DevelopmentSolutionsList';
 
 import type { Analytics } from '../../utils/Analytics';
 
@@ -35,6 +36,7 @@ export default function Body({ className, analytics }: Props) {
                 // TODO animate page transition to /projects
               }}
             />
+            <DevelopmentSolutionsList />
           </div>
         </ContentMaxWidth>
       </section>

@@ -1,0 +1,28 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.dev-solutions-list {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  margin: 100px 0 0 0;
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    margin: 0 25px;
+  }
+
+  .icon {
+    margin-right: 15px;
+    transform: scale(0.8);
+  }
+
+  .label {
+    font-family: $source-sans-pro-font-family;
+    font-weight: lighter;
+    color: $theme-medium-purple;
+    font-size: 14pt;
+    white-space: nowrap;
+  }
+}

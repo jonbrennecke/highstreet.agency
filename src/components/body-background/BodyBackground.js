@@ -18,7 +18,7 @@ export default function BodyBackground({ className }: Props) {
       viewBox="0 0 1440 1501"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlXlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <defs>
         <linearGradient
@@ -39,7 +39,7 @@ export default function BodyBackground({ className }: Props) {
           id="linearGradient-2"
         >
           <stop stopColor="#FFDEE6" offset="0%" />
-          <stop stopColor="#92A1F8" stop-Opacity="0.373075181" offset="100%" />
+          <stop stopColor="#92A1F8" stopOpacity="0.373075181" offset="100%" />
         </linearGradient>
       </defs>
       <g
