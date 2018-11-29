@@ -10,14 +10,18 @@
   border-radius: 6px;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   h3 {
     @include paragraph;
     white-space: nowrap;
     color: #fff;
+    margin-left: 148px;
   }
 
   .feature-call-to-action {
+    position: relative;
+    z-index: 1;
     background-color: $theme-medium-blue;
     border-radius: 6px;
     color: #fff;
@@ -29,6 +33,30 @@
 
     &:active, &:focus, &:hover {
       box-shadow: 0px 5px 35px 0px rgba($theme-dark-purple, 0.35);
+    }
+  }
+
+  .feature-image-left {
+    position: absolute;
+    top: 5px;
+    left: 55px;
+    bottom: 5px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .feature-image-right {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    bottom: -25px;
+
+    img {
+      height: 100%;
+      width: auto;
     }
   }
 }

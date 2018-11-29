@@ -3,6 +3,8 @@ import React from 'react';
 import classnames from 'classnames';
 
 import Button from '../button/Button';
+import FeatureLeftSideImage from './FeatureLeftSideImage';
+import FeatureRightSideImage from './FeatureRightSideImage';
 
 import type { Analytics } from '../../utils/Analytics';
 
@@ -18,6 +20,8 @@ type Props = {
 export default function Feature({ className, id, analytics }: Props) {
   return (
     <aside id={id} className={classnames('feature', className)}>
+      <FeatureLeftSideImage className="" />
+      <FeatureRightSideImage className="" />
       <h3>Join the amazing companies choosing High Street</h3>
       <Button
         analytics={analytics}
