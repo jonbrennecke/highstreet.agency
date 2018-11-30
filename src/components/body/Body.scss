@@ -2,13 +2,34 @@
 @import "../../styles/fonts";
 @import "../../styles/text";
 
-.process {
+.body-subsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    background-color: $theme-extra-light-blue;
+  }
+
+  &.solutions:before {
+    bottom: 500px;
+  }
+}
+
+.body-subsection.process {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 45px;
-  position: relative;
-  z-index: 3;
 
   .process-inner {
     display: flex;
@@ -46,13 +67,4 @@
     justify-content: center;
     flex-direction: column;
   }
-}
-
-.solutions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  position: relative;
-  overflow: hidden;
 }

@@ -25,7 +25,7 @@ type Props = {
 export default function Body({ className, analytics }: Props) {
   return (
     <Fragment>
-      <section className={classnames('process', className)}>
+      <section className={classnames('body-subsection process', className)}>
         <ContentMaxWidth className="process-inner">
           <ScrollIndicator />
           <div className="below-scroll-content">
@@ -43,7 +43,7 @@ export default function Body({ className, analytics }: Props) {
           </div>
         </ContentMaxWidth>
       </section>
-      <section className={classnames('solutions', className)}>
+      <section className={classnames('body-subsection solutions', className)}>
         <BodyBackground />
         <ContentMaxWidth className="solutions-inner">
           <Solutions analytics={analytics} />

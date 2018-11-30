@@ -21,7 +21,10 @@ export default function GetStarted({ className, analytics }: Props) {
     <section className={classnames('get-started', className)}>
       <div className="description">
         <Title text="Get started with High Street today" />
-        <p className="paragraph">High Street offers a wide range of solutions to help you launch your next mobile app, website or platform.</p>
+        <p className="paragraph">
+          High Street offers a wide range of solutions to help you launch your
+          next mobile app, website or platform.
+        </p>
         <FlatCallToActionButton
           analytics={analytics}
           name="get-started-call-to-action-button"

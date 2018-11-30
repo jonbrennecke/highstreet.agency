@@ -9,9 +9,6 @@ import Body from '../body/Body';
 import { SEO_PAGE_TYPE } from '../../constants';
 import Seo from '../seo/Seo';
 
-// $FlowFixMe
-import './Home.scss';
-
 type Props = {
   analytics: Analytics.Analytics,
 };
