@@ -110,6 +110,16 @@ export default class ContactForm extends Component<Props, State> {
             this.props.onSubmit();
           }}
         />
+        <p className="email-paragraph">
+          Or send us an email at{' '}
+          <a
+            target="_blank"
+            href="mailto:info@highstreet.agency"
+            rel="noopener noreferrer"
+          >
+            info@highstreet.agency
+          </a>
+        </p>
       </form>
     );
   }

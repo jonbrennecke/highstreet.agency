@@ -1,5 +1,6 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
+@import "../../styles/text";
 
 .contact-form {
   position: relative;
@@ -76,7 +77,19 @@
   }
 
   .submit-button {
-    margin-top: 25px;
+    margin: 60px 0;
     background-color: $theme-medium-magenta;
+  }
+
+  .email-paragraph {
+    @include paragraph;
+    color: #fff;
+    font-size: 12pt;
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+    }
   }
 }
