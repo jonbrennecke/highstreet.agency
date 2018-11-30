@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
-import CallToActionButton from '../call-to-action-button/CallToActionButton';
+import CallToActionLink from '../call-to-action-link/CallToActionLink';
 import Headline from '../headline/Headline';
 import Navigation from '../navigation/Navigation';
 import HeadlineParagraph from '../headline-paragraph/HeadlineParagraph';
@@ -18,7 +18,7 @@ type Props = {
   analytics: Analytics,
   headlineText: string,
   headlineParagraphText?: string,
-  callToActionText?: string,
+  callToAction?: { text: string, pathName: string },
 };
 
 export default function Header({
@@ -26,7 +26,7 @@ export default function Header({
   analytics,
   headlineText,
   headlineParagraphText,
-  callToActionText,
+  callToAction,
 }: Props) {
   return (
     <header className={classnames('header', className)}>
@@ -36,14 +36,12 @@ export default function Header({
         {headlineParagraphText ? (
           <HeadlineParagraph text={headlineParagraphText} />
         ) : null}
-        {callToActionText ? (
-          <CallToActionButton
+        {callToAction ? (
+          <CallToActionLink
             analytics={analytics}
-            name="Hero call-to-action button"
-            text="Work with us"
-            onClick={() => {
-              // TODO animate page transition to /contact
-            }}
+            name="Hero call-to-action link"
+            text={callToAction.text}
+            to={callToAction.pathName}
           />
         ) : null}
       </ContentMaxWidth>
