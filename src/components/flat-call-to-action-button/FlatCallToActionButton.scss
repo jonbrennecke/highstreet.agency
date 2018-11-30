@@ -16,4 +16,12 @@
   &:active, &:focus, &:hover {
     box-shadow: 0px 5px 35px 0px rgba($theme-dark-purple, 0.35);
   }
+
+  &:hover, &:focus {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
