@@ -24,6 +24,7 @@ export default function NavigationLink({
   return (
     <NavLink
       to={to}
+      exact
       className={classnames('nav-link', className)}
       activeClassName="active"
       ariaCurrent="page"
