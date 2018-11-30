@@ -30,6 +30,7 @@ export default class Home extends Component<Props> {
         <Header
           analytics={this.props.analytics}
           headlineText="We create innovative digital products"
+          callToActionText="Work with us"
         />
         <Body analytics={this.props.analytics} />
         <Footer analytics={this.props.analytics} />

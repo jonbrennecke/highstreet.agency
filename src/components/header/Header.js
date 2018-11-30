@@ -17,23 +17,24 @@ type Props = {
   className?: ?string,
   analytics: Analytics,
   headlineText: string,
+  callToActionText?: string,
 };
 
-export default function Header({ className, analytics, headlineText }: Props) {
+export default function Header({ className, analytics, headlineText, callToActionText }: Props) {
   return (
     <header className={classnames('header', className)}>
       <HeaderBackground />
       <ContentMaxWidth className="header-inner">
         <Navigation analytics={analytics} />
         <Headline className="call-to-action" text={headlineText} />
-        <CallToActionButton
+        {callToActionText ? <CallToActionButton
           analytics={analytics}
           name="Hero call-to-action button"
           text="Work with us"
           onClick={() => {
             // TODO animate page transition to /contact
           }}
-        />
+        /> : null}
       </ContentMaxWidth>
     </header>
   );
