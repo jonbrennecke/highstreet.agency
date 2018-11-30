@@ -11,7 +11,6 @@
 
   .nav-logo {
     display: flex;
-    margin-top: 45px;
     flex: 1;
     align-items: center;
     justify-content: flex-start;
@@ -28,9 +27,13 @@
     border-top-color: transparent;
     border-top-width: 4px;
 
-    &.active {
+    &.active:not(.logo) {
       font-weight: bold;;
       border-top-color: #fff;
+    }
+
+    &.logo {
+      padding-top: 35px;
     }
   }
 }

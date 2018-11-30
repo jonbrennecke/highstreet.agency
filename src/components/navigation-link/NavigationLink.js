@@ -3,11 +3,12 @@ import React from 'react';
 import classnames from 'classnames';
 import { NavLink } from 'react-router-dom';
 
+import type { Children } from '../../types/react';
 import type { Analytics } from '../../utils/Analytics';
 
 type Props = {
   className?: ?string,
-  text: string,
+  children?: ?Children,
   to: string,
   label: string,
   analytics: Analytics,
@@ -16,9 +17,9 @@ type Props = {
 export default function NavigationLink({
   className,
   to,
-  text,
   label,
   analytics,
+  children,
 }: Props) {
   return (
     <NavLink
@@ -28,7 +29,7 @@ export default function NavigationLink({
       ariaCurrent="page"
       onClick={trackClick(analytics, label)}
     >
-      {text}
+      {children}
     </NavLink>
   );
 }

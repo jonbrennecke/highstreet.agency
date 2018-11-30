@@ -27,7 +27,14 @@ export default function Footer({ className, analytics }: Props) {
         <RowLayout>
           <div className="footer-column-container">
             <ColumnLayout className="footer-column">
-              <NavLogo />
+              <NavigationLink
+                className="footer-nav-link"
+                to="/"
+                label="'Home' nav link"
+                analytics={analytics}
+              >
+                <NavLogo />
+              </NavigationLink>
             </ColumnLayout>
           </div>
           <div className="footer-column-container">
@@ -35,32 +42,36 @@ export default function Footer({ className, analytics }: Props) {
               <h3 className="column-label">Explore</h3>
               <NavigationLink
                 className="footer-nav-link"
-                text="Home"
                 to="/"
                 label="'Home' nav link"
                 analytics={analytics}
-              />
+              >
+                Home
+              </NavigationLink>
               <NavigationLink
                 className="footer-nav-link"
-                text="Process"
                 to="/process"
                 label="'Process' nav link"
                 analytics={analytics}
-              />
+              >
+                Process
+              </NavigationLink>
               <NavigationLink
                 className="footer-nav-link"
-                text="Work"
                 to="/work"
                 label="'Work' nav link"
                 analytics={analytics}
-              />
+              >
+                Work
+              </NavigationLink>
               <NavigationLink
                 className="footer-nav-link"
-                text="Contact"
                 to="/contact"
                 label="'Contact' nav link"
                 analytics={analytics}
-              />
+              >
+                Contact
+              </NavigationLink>
             </ColumnLayout>
           </div>
           <div className="footer-column-container">
@@ -68,25 +79,28 @@ export default function Footer({ className, analytics }: Props) {
               <h3 className="column-label">Connect</h3>
               <NavigationLink
                 className="footer-nav-link"
-                text="Instagram"
                 to="/"
                 label="'Instagram' external nav link"
                 analytics={analytics}
-              />
+              >
+                Instagram
+              </NavigationLink>
               <NavigationLink
                 className="footer-nav-link"
-                text="LinkedIn"
                 to="/"
                 label="'LinkedIn' external nav link"
                 analytics={analytics}
-              />
+              >
+                LinkedIn
+              </NavigationLink>
               <NavigationLink
                 className="footer-nav-link"
-                text="Email"
                 to="mailto:info@highstreet.com"
                 label=""
                 analytics={analytics}
-              />
+              >
+                Email
+              </NavigationLink>
             </ColumnLayout>
           </div>
         </RowLayout>

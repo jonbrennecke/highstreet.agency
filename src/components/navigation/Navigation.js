@@ -18,32 +18,43 @@ type Props = {
 export default function Navigation({ className, analytics }: Props) {
   return (
     <nav className={classnames('navigation', className)}>
-      <NavLogo />
+      <NavigationLink
+          className="logo"
+          to="/"
+          label="'Home' logo link"
+          analytics={analytics}
+        >
+        <NavLogo />
+      </NavigationLink>
       <div className="nav-links">
         <NavigationLink
-          text="Home"
           to="/"
           label="'Home' nav link"
           analytics={analytics}
-        />
+        >
+          Home
+        </NavigationLink>
         <NavigationLink
-          text="Process"
           to="/process"
           label="'Process' nav link"
           analytics={analytics}
-        />
+        >
+          Process
+        </NavigationLink>
         <NavigationLink
-          text="Work"
           to="/work"
           label="'Work' nav link"
           analytics={analytics}
-        />
+        >
+          Work
+        </NavigationLink>
         <NavigationLink
-          text="Contact"
           to="/contact"
           label="'Contact' nav link"
           analytics={analytics}
-        />
+        >
+          Contact
+        </NavigationLink>
       </div>
     </nav>
   );
