@@ -1,6 +1,7 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
 @import "../../styles/text";
+@import "../../styles/media";
 
 .get-started {
   position: relative;
@@ -9,6 +10,10 @@
   padding: 45px 100px;
   margin-top: 125px;
   flex-direction: row;
+
+  @include respond-to-desktop-xl {
+    margin-top: 225px;
+  }
   
   .title {
     color: $theme-medium-purple;

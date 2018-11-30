@@ -24,7 +24,7 @@ $DEVICES: (
 );
 
 // equation: eq, lte, gte, gt, lt
-@mixin respond-to($device-name, $orientation, $equation: 'eq') {
+@mixin respond-to-device($device-name, $orientation, $equation: 'eq') {
   $device: map-get($DEVICES, $device-name);
   $device-min: get-device-min($device);
   $device-max: get-device-max($device);
@@ -172,4 +172,10 @@ $DEVICES: (
     @return "(orientation: #{$orientation})";
   }
   @return "";
+}
+
+@mixin respond-to-desktop-xl {
+  @media only screen and (min-width: 2000px) and (orientation: landscape) {
+    @content;
+  }
 }

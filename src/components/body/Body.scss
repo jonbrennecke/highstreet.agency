@@ -1,6 +1,7 @@
 @import "../../styles/constants";
 @import "../../styles/fonts";
 @import "../../styles/text";
+@import "../../styles/media";
 
 .body-subsection {
   display: flex;
@@ -20,8 +21,12 @@
     background-color: $theme-extra-light-blue;
   }
 
-  &.solutions:before {
-    bottom: 500px;
+  &:last-of-type {
+    padding-bottom: 200px;
+
+    &:before {
+      bottom: 650px;
+    }
   }
 }
 
@@ -66,5 +71,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  @include respond-to-desktop-xl {
+    .below-scroll-content {
+      margin-top: 175px;
+    }
   }
 }

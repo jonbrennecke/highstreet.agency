@@ -7,6 +7,18 @@
   align-items: center;
   justify-content: center;
   margin-top: 300px;
+  background-color: $theme-dark-purple;
+  
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    background-color: $theme-extra-light-blue;
+  }
 
   .footer-contents {
     position: relative;
@@ -17,9 +29,10 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 100%;
     width: 100%;
     height: auto;
+    background-color: transparent;
   }
 
   .footer-column-container {
@@ -52,6 +65,8 @@
     margin-top: 60px;
     display: flex;
     padding: 45px 45px 0px 45px;
+    align-items: center;
+    justify-content: center;
   }
 
   .copyright-row-item {
