@@ -27,8 +27,7 @@ export default function Footer({ className, analytics }: Props) {
         <RowLayout>
           <div className="footer-column-container">
             <ColumnLayout className="footer-column">
-              <NavLogo/>
-              <h3 className="logo-subtitle">Digital Creative Agency</h3>
+              <NavLogo />
             </ColumnLayout>
           </div>
           <div className="footer-column-container">
@@ -90,6 +89,24 @@ export default function Footer({ className, analytics }: Props) {
               />
             </ColumnLayout>
           </div>
+        </RowLayout>
+        <RowLayout className="copyright-row">
+          <p className="copyright-row-item copyright-text">
+            © 2018 - High Street. All Rights Reserved.
+          </p>
+          <p className="copyright-row-item github-text">
+            High Street is open source on{' '}
+            <a
+              target="_blank"
+              href="https://github.com/jonbrennecke/highstreet.agency"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </p>
+          <p className="copyright-row-item location-text">
+            {"Made with ❤ in Coeur d'Alene, Idaho"}
+          </p>
         </RowLayout>
       </ContentMaxWidth>
     </footer>
