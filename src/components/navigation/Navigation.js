@@ -19,19 +19,15 @@ export default function Navigation({ className, analytics }: Props) {
   return (
     <nav className={classnames('navigation', className)}>
       <NavigationLink
-          className="logo"
-          to="/"
-          label="'Home' logo link"
-          analytics={analytics}
-        >
+        className="logo"
+        to="/"
+        label="'Home' logo link"
+        analytics={analytics}
+      >
         <NavLogo />
       </NavigationLink>
       <div className="nav-links">
-        <NavigationLink
-          to="/"
-          label="'Home' nav link"
-          analytics={analytics}
-        >
+        <NavigationLink to="/" label="'Home' nav link" analytics={analytics}>
           Home
         </NavigationLink>
         <NavigationLink

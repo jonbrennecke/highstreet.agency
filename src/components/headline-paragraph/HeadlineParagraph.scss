@@ -1,0 +1,7 @@
+@import "../../styles/fonts";
+@import "../../styles/text";
+
+.headline-paragraph {
+  @include paragraph;
+  color: #fff;
+}

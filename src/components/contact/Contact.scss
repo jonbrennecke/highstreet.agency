@@ -1,0 +1,14 @@
+@import "../../styles/constants";
+
+.contact-page {
+  background-color: $theme-medium-blue;
+  background-image: linear-gradient(
+    map-get($theme-header-gradient, "start"),
+    map-get($theme-header-gradient, "stop"));
+}
+
+.contact-header {
+  .headline.call-to-action {
+    margin-bottom: 15px;
+  }
+}
