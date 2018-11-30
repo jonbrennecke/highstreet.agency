@@ -8,6 +8,7 @@ import NavLogo from '../nav-logo/NavLogo';
 import ColumnLayout from '../layout/column-layout/ColumnLayout';
 import RowLayout from '../layout/row-layout/RowLayout';
 import NavigationLink from '../navigation-link/NavigationLink';
+import ExternalNavigationLink from '../external-navigation-link/ExternalNavigationLink';
 
 // $FlowFixMe
 import './Footer.scss';
@@ -77,30 +78,30 @@ export default function Footer({ className, analytics }: Props) {
           <div className="footer-column-container">
             <ColumnLayout className="footer-column">
               <h3 className="column-label">Connect</h3>
-              <NavigationLink
+              <ExternalNavigationLink
                 className="footer-nav-link"
-                to="/"
+                href="https://instagram.com/jonbrennecke.dev"
                 label="'Instagram' external nav link"
                 analytics={analytics}
               >
                 Instagram
-              </NavigationLink>
-              <NavigationLink
+              </ExternalNavigationLink>
+              <ExternalNavigationLink
                 className="footer-nav-link"
-                to="/"
+                href="https://www.linkedin.com/in/jonbrennecke"
                 label="'LinkedIn' external nav link"
                 analytics={analytics}
               >
                 LinkedIn
-              </NavigationLink>
-              <NavigationLink
+              </ExternalNavigationLink>
+              <ExternalNavigationLink
                 className="footer-nav-link"
-                to="mailto:info@highstreet.com"
-                label=""
+                href="mailto:info@highstreet.com"
+                label="mailto link to info@highstreet.com"
                 analytics={analytics}
               >
                 Email
-              </NavigationLink>
+              </ExternalNavigationLink>
             </ColumnLayout>
           </div>
         </RowLayout>
