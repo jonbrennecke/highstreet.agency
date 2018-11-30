@@ -53,17 +53,18 @@
     @include paragraph;
     text-align: center;
     font-size: 17pt;
+    margin: 75px 0;
   }
 
   .title {
     color: $theme-medium-purple;
     text-align: center;
+    max-width: 600px;
   }
 
   .call-to-action-button {
     background-color: $theme-medium-magenta;
     color: #fff;
-    margin-top: 100px;
   }
 
   .scroll-indicator {
