@@ -25,7 +25,13 @@
     padding-bottom: 200px;
 
     &:before {
-      max-height: 500px;
+      max-height: 60%;
+    }
+  }
+
+  @include respond-to-desktop-xl {
+    &:last-of-type:before {
+      max-height: 80%;
     }
   }
 }
@@ -66,7 +72,7 @@
   }
 
   .below-scroll-content {
-    margin: 375px 0 175px 0;
+    margin: 175px 0 175px 0;
     display: flex;
     align-items: center;
     justify-content: center;
