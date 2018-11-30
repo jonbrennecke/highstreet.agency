@@ -35,7 +35,7 @@ export default class Process extends Component<Props> {
           analytics={this.props.analytics}
           headlineText="Our Process"
           headlineParagraphText="We are currently re-thinking our website. Stay tuned!"
-          callToActionText="Work with us"
+          callToAction={{ text: 'Work with us', pathName: '/contact' }}
         />
         <ContentMaxWidth className="process-page-body">
           {/* TODO */}

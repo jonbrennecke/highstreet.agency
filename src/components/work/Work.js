@@ -35,7 +35,7 @@ export default class Work extends Component<Props> {
           className="work-page-header"
           headlineText="Here's what we're working on"
           headlineParagraphText="We are currently re-thinking our website. Stay tuned!"
-          callToActionText="Work with us"
+          callToAction={{ text: 'Work with us', pathName: '/contact' }}
         />
         <ContentMaxWidth className="process-page-body">
           {/* TODO */}
