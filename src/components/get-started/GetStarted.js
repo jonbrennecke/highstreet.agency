@@ -20,7 +20,7 @@ export default function GetStarted({ className, analytics }: Props) {
   return (
     <section className={classnames('get-started', className)}>
       <div className="description">
-        <Title text="Get started with High Street today" />
+        <Title text="Get started today" />
         <p className="paragraph">
           High Street offers a wide range of solutions to help you launch your
           next mobile app, website or platform.
