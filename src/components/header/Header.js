@@ -16,18 +16,16 @@ import type { Analytics } from '../../utils/Analytics';
 type Props = {
   className?: ?string,
   analytics: Analytics,
+  headlineText: string,
 };
 
-export default function Header({ className, analytics }: Props) {
+export default function Header({ className, analytics, headlineText }: Props) {
   return (
     <header className={classnames('header', className)}>
       <HeaderBackground />
       <ContentMaxWidth className="header-inner">
         <Navigation analytics={analytics} />
-        <Headline
-          className="call-to-action"
-          text="We connect startups with mobile audiences"
-        />
+        <Headline className="call-to-action" text={headlineText} />
         <CallToActionButton
           analytics={analytics}
           name="Hero call-to-action button"

@@ -14,8 +14,8 @@ type Props = {
 };
 
 // $FlowFixMe
-@pageview(Analytics.CategoryEnum.HomePage, 'Home page view')
-export default class Home extends Component<Props> {
+@pageview(Analytics.CategoryEnum.ContactPage, 'Contact page view')
+export default class Contact extends Component<Props> {
   props: Props;
 
   render() {
@@ -23,14 +23,11 @@ export default class Home extends Component<Props> {
       <Fragment>
         <Seo
           pageType={SEO_PAGE_TYPE.WEBPAGE}
-          title="High Street"
-          description="High Street"
+          title="High Street - Contact Us"
+          description="High Street - Contact Us"
           url="http://highstreet.agency"
         />
-        <Header
-          analytics={this.props.analytics}
-          headlineText="We create innovative digital products"
-        />
+        <Header analytics={this.props.analytics} headlineText="Get in touch" />
         <Body analytics={this.props.analytics} />
         <Footer analytics={this.props.analytics} />
       </Fragment>

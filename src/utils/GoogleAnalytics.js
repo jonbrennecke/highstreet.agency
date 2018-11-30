@@ -16,8 +16,9 @@ const DEBUG = false;
 
 export const CategoryEnum = {
   HomePage: 'Pages.HomePage',
-  PostPage: 'Pages.PostPage',
-  PostsPage: 'Pages.PostsPage',
+  ContactPage: 'Pages.ContactPage',
+  ProcessPage: 'Pages.ProcessPage',
+  WorkPage: 'Pages.WorkPage',
 };
 
 export const ActionEnum = {
