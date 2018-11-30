@@ -27,11 +27,9 @@ export default class Home extends Component<Props> {
           description="High Street"
           url="http://highstreet.agency"
         />
-        {/* TODO: <Layout>
-        </Layout> */}
         <Header analytics={this.props.analytics} />
         <Body analytics={this.props.analytics} />
-        <Footer />
+        <Footer analytics={this.props.analytics} />
       </Fragment>
     );
   }

@@ -1,3 +1,6 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
 .footer {
   display: flex;
   position: relative;
@@ -18,5 +21,36 @@
     bottom: 0;
     width: 100%;
     height: auto;
+  }
+
+  .footer-column-container {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .column-label {
+    font-family: $source-sans-pro-font-family;
+    font-weight: lighter;
+    color: $theme-medium-purple;
+    font-size: 14pt;
+    margin-top: 8px;
+  }
+
+  .logo-subtitle {
+    font-family: $source-sans-pro-font-family;
+    font-weight: lighter;
+    color: $theme-extra-light-blue;
+    font-size: 14pt;
+  }
+
+  .footer-nav-link {
+    font-family: $source-sans-pro-font-family;
+    font-weight: lighter;
+    color: $theme-extra-light-blue;
+    font-size: 14pt;
+    text-decoration: none;
+    margin: 10px 0;
   }
 }
