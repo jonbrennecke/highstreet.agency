@@ -99,7 +99,7 @@ export default class Contact extends Component<Props, State> {
           url="http://highstreet.agency"
         />
         <Alert
-          title="Sent!"
+          title="Thanks!"
           text="Your message has been sent."
           isVisible={this.state.isSuccessMessageVisible}
         />
