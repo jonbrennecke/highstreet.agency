@@ -1,9 +1,9 @@
 @import "../../styles/constants";
 
-.contact-page {
+.process-page {
   background-color: $theme-dark-purple;
 
-  .contact-header {
+  .process-page-header {
     .headline.call-to-action {
       margin-bottom: 15px;
     }
@@ -11,15 +11,11 @@
     height: auto;
   }
 
-  .contact-page-body {
+  .process-page-body {
     margin: 0 auto;
     display: flex;
     flex: 1;
     align-items: flex-start;
     justify-content: center
-  }
-
-  .contact-page-footer .footer-top-path {
-    // fill: $theme-medium-light-blue;
   }
 }

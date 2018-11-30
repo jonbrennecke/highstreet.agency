@@ -1,13 +1,16 @@
 /* @flow */
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import * as Analytics from '../../utils/Analytics';
 import { pageview } from '../../utils/AnalyticsUI';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
-import Body from '../body/Body';
 import { SEO_PAGE_TYPE } from '../../constants';
+import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
 import Seo from '../seo/Seo';
+
+// $FlowFixMe
+import './Process.scss';
 
 type Props = {
   analytics: Analytics.Analytics,
@@ -20,17 +23,25 @@ export default class Process extends Component<Props> {
 
   render() {
     return (
-      <Fragment>
+      <main className="process-page">
         <Seo
           pageType={SEO_PAGE_TYPE.WEBPAGE}
           title="High Street - Our Process"
           description="High Street - Our Process"
           url="http://highstreet.agency"
         />
-        <Header analytics={this.props.analytics} headlineText="Our Process" />
-        <Body analytics={this.props.analytics} />
+        <Header
+          className="process-page-header"
+          analytics={this.props.analytics}
+          headlineText="Our Process"
+          headlineParagraphText="We are currently re-thinking our website. Stay tuned!"
+          callToActionText="Work with us"
+        />
+        <ContentMaxWidth className="process-page-body">
+          {/* TODO */}
+        </ContentMaxWidth>
         <Footer analytics={this.props.analytics} />
-      </Fragment>
+      </main>
     );
   }
 }
