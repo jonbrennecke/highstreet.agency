@@ -1,9 +1,9 @@
 @import "../../styles/constants";
 
-.process-page {
+.contact-page {
   background-color: $theme-dark-purple;
 
-  .process-page-header {
+  .contact-page-header {
     .headline.call-to-action {
       margin-bottom: 15px;
     }
@@ -11,7 +11,7 @@
     height: auto;
   }
 
-  .process-page-body {
+  .contact-page-body {
     margin: 0 auto;
     display: flex;
     flex: 1;

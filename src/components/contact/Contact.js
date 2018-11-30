@@ -109,7 +109,7 @@ export default class Contact extends Component<Props, State> {
           isVisible={this.state.isFailureMessageVisible}
         />
         <Header
-          className="contact-header"
+          className="contact-page-header"
           analytics={this.props.analytics}
           headlineText="Let's talk!"
           headlineParagraphText="We’d love to hear what you are working on. Drop us a note here and we’ll get back to you in 24 hours or less."
