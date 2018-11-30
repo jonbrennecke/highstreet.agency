@@ -1,0 +1,82 @@
+@import "../../styles/constants";
+@import "../../styles/fonts";
+
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .form-input-container {
+    position: relative;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
+    border-bottom-width: 1px;
+    padding: 7px 0 12px 0;
+    min-width: 320px;
+    
+    &:nth-of-type(2) {
+      margin-left: 15px;
+    }
+
+
+    &.full-width {
+      width: 100%; 
+    }
+  }
+
+  .form-input {
+    background: none;
+    border: 0;
+    outline: none;
+    width: 100%;
+
+    // NOTE: hack to get around Chrome's ugly autofill styles
+    transition: background-color 500ms ease-in-out 0s;
+    transition-delay: 5000s;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus {
+      background-color: $theme-medium-blue;
+      -webkit-text-fill-color: #fff;
+    }
+  }
+
+  .form-input, .form-input + label {
+    font-family: $source-sans-pro-font-family;
+    font-weight: lighter;
+    color: #fff;
+    max-width: 350px;
+    font-size: 16pt;
+  }
+
+  .form-input + label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    pointer-events: none;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .form-input:active + label,
+  .form-input:focus + label,
+  .form-input:not([value=""]) + label,
+  .form-input:not([value]) + label {
+    font-size: 11pt;
+    transform: translateY(-28px);
+  }
+
+  .contact-form-row {
+    margin: 25px 0;
+  }
+
+  .submit-button {
+    margin-top: 25px;
+    background-color: $theme-medium-magenta;
+  }
+}

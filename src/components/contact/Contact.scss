@@ -5,10 +5,24 @@
   background-image: linear-gradient(
     map-get($theme-header-gradient, "start"),
     map-get($theme-header-gradient, "stop"));
-}
 
-.contact-header {
-  .headline.call-to-action {
-    margin-bottom: 15px;
+  .contact-header {
+    .headline.call-to-action {
+      margin-bottom: 15px;
+    }
+    
+    height: auto;
+  }
+
+  .contact-page-body {
+    margin: 0 auto;
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center
+  }
+
+  .contact-page-footer .footer-top-path {
+    fill: $theme-medium-light-blue;
   }
 }

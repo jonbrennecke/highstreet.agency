@@ -7,6 +7,8 @@ import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import { SEO_PAGE_TYPE } from '../../constants';
 import Seo from '../seo/Seo';
+import ContactForm from '../contact-form/ContactForm';
+import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
 
 // $FlowFixMe
 import './Contact.scss';
@@ -33,9 +35,15 @@ export default class Contact extends Component<Props> {
           className="contact-header"
           analytics={this.props.analytics}
           headlineText="Let's talk!"
-          headlineParagraphText="We’d love to hear what you are working on. Drop us a note here and we’ll get back to you within 24 hours."
+          headlineParagraphText="We’d love to hear what you are working on. Drop us a note here and we’ll get back to you in 24 hours or less."
         />
-        <Footer analytics={this.props.analytics} />
+        <ContentMaxWidth className="contact-page-body">
+          <ContactForm analytics={this.props.analytics} onSubmit={() => {}} />
+        </ContentMaxWidth>
+        <Footer
+          className="contact-page-footer"
+          analytics={this.props.analytics}
+        />
       </main>
     );
   }

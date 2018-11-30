@@ -44,6 +44,7 @@ export default function FooterBackground({ className }: Props) {
                   fill="#5D5875"
                   fillRule="nonzero"
                   mask="url(#mask-2)"
+                  className="footer-top-path"
                 />
                 <path
                   d="M-9.09494702e-13,-376 L1440,-376 L1440,101.787109 C1346.66667,96.9291695 1166,102.416833 898,118.2501 C630,134.083367 330.666667,170.333333 -9.09494702e-13,227 L-9.09494702e-13,-376 Z"

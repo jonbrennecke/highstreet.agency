@@ -5,7 +5,6 @@ import classnames from 'classnames';
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
 import CallToActionButton from '../call-to-action-button/CallToActionButton';
 import Headline from '../headline/Headline';
-import HeaderBackground from '../header-background/HeaderBackground';
 import Navigation from '../navigation/Navigation';
 import HeadlineParagraph from '../headline-paragraph/HeadlineParagraph';
 
