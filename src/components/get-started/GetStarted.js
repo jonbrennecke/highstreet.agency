@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import Title from '../title/Title';
-import FlatCallToActionButton from '../flat-call-to-action-button/FlatCallToActionButton';
+import FlatCallToActionLink from '../flat-call-to-action-link/FlatCallToActionLink';
 import FounderFeatureImage from 'assets/images/FounderFeature.png';
 
 // $FlowFixMe
@@ -25,14 +25,12 @@ export default function GetStarted({ className, analytics }: Props) {
           High Street offers a wide range of solutions to help you launch your
           next mobile app, website or platform.
         </p>
-        <FlatCallToActionButton
+        <FlatCallToActionLink
           analytics={analytics}
           name="get-started-call-to-action-button"
           className="call-to-action"
           text="Work with us"
-          onClick={() => {
-            // TODO transition to /contact page
-          }}
+          to="/contact"
         />
       </div>
       <div className="image">

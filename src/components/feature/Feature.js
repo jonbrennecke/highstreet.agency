@@ -2,7 +2,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import FlatCallToActionButton from '../flat-call-to-action-button/FlatCallToActionButton';
+import FlatCallToActionLink from '../flat-call-to-action-link/FlatCallToActionLink';
 import FeatureLeftSideImage from './FeatureLeftSideImage';
 import FeatureRightSideImage from './FeatureRightSideImage';
 
@@ -23,14 +23,12 @@ export default function Feature({ className, id, analytics }: Props) {
       <FeatureLeftSideImage className="" />
       <FeatureRightSideImage className="" />
       <h3>Join the amazing companies choosing High Street</h3>
-      <FlatCallToActionButton
+      <FlatCallToActionLink
         analytics={analytics}
         className="feature-call-to-action"
         name="feature-call-to-action"
         text="Work with us"
-        onClick={() => {
-          // TODO
-        }}
+        to="/contact"
       />
     </aside>
   );
