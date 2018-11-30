@@ -20,7 +20,8 @@
     "eslint": "eslint './src/**/*.js' index.js",
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
     "gulp": "gulp",
-    "generate-favicons": "gulp generate-favicons"
+    "generate-favicons": "gulp generate-favicons",
+    "firebase": "firebase"
   },
   "author": "Jon Brennecke",
   "license": "MIT",
@@ -84,6 +85,7 @@
     "eslint-plugin-react": "^7.7.0",
     "express": "4.14.0",
     "file-loader": "2.0.0",
+    "firebase-tools": "6.1.1",
     "flow-bin": "0.66.0",
     "font-loader": "0.1.2",
     "gulp": "3.9.1",

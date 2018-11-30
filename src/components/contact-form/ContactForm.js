@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import { autobind } from 'core-decorators';
 
 import FlatCallToActionButton from '../flat-call-to-action-button/FlatCallToActionButton';
 import RowLayout from '../layout/row-layout/RowLayout';
@@ -10,11 +11,19 @@ import './ContactForm.scss';
 
 import type { Analytics } from '../../utils/Analytics';
 
+export type ContactData = {
+  fullName: string,
+  email: string,
+  phoneNumber: string,
+  budget: string,
+  description: string,
+};
+
 type Props = {
   analytics: Analytics,
   className?: ?string,
   id?: ?string,
-  onSubmit: () => void,
+  onSubmit: (data: ContactData) => any,
 };
 
 type State = {
@@ -25,6 +34,8 @@ type State = {
   description: string,
 };
 
+// $FlowFixMe
+@autobind
 export default class ContactForm extends Component<Props, State> {
   state = {
     fullName: '',
@@ -34,9 +45,22 @@ export default class ContactForm extends Component<Props, State> {
     description: '',
   };
 
+  submitForm() {
+    this.props.onSubmit({
+      fullName: this.state.fullName,
+      email: this.state.email,
+      phoneNumber: this.state.phoneNumber,
+      budget: this.state.budget,
+      description: this.state.description,
+    });
+  }
+
   render() {
     return (
-      <form className={classnames('contact-form', this.props.className)}>
+      <form
+        className={classnames('contact-form', this.props.className)}
+        onSubmit={e => e.preventDefault()}
+      >
         <RowLayout className="contact-form-row">
           <div className="form-input-container">
             <input
@@ -102,13 +126,12 @@ export default class ContactForm extends Component<Props, State> {
           <label htmlFor="description">Describe your project</label>
         </div>
         <FlatCallToActionButton
+          type="submit"
           className="submit-button"
           name="contact-form-submit-button"
           text="Send"
           analytics={this.props.analytics}
-          onClick={() => {
-            this.props.onSubmit();
-          }}
+          onClick={() => this.submitForm()}
         />
         <p className="email-paragraph">
           Or send us an email at{' '}

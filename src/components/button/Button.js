@@ -13,6 +13,7 @@ type Props = {
   id?: ?string,
   name: string,
   text: string,
+  type?: 'submit' | 'button',
   onClick: () => void,
 };
 
@@ -23,10 +24,11 @@ export default function Button({
   name,
   text,
   onClick,
+  type,
 }: Props) {
   return (
     <button
-      type="button"
+      type={type || 'button'}
       id={id}
       className={classnames('button', className)}
       name={name}

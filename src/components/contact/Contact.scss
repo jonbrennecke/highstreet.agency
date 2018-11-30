@@ -1,10 +1,7 @@
 @import "../../styles/constants";
 
 .contact-page {
-  background-color: $theme-medium-blue;
-  background-image: linear-gradient(
-    map-get($theme-header-gradient, "start"),
-    map-get($theme-header-gradient, "stop"));
+  background-color: $theme-dark-purple;
 
   .contact-header {
     .headline.call-to-action {
@@ -23,6 +20,6 @@
   }
 
   .contact-page-footer .footer-top-path {
-    fill: $theme-medium-light-blue;
+    // fill: $theme-medium-light-blue;
   }
 }
