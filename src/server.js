@@ -34,7 +34,7 @@ const render = async () => {
 };
 
 const renderReactDOM = async (dom: JSDOM, reactDOM: string) => {
-  const templateBody = dom.window.document.querySelector('main');
+  const templateBody = dom.window.document.querySelector('#react-main');
   templateBody.insertAdjacentHTML('afterbegin', reactDOM);
   return dom;
 };
