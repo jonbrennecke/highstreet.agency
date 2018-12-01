@@ -138,7 +138,7 @@ export default class HeaderBackground extends Component<Props, State> {
               y1="2.26923772%"
               x2="50%"
               y2="97.5117413%"
-              id="linearGradient-1"
+              id="header-linearGradient-1"
             >
               <stop stopColor="#697FFC" offset="0%" />
               <stop stopColor="#4259D9" offset="100%" />
@@ -182,7 +182,7 @@ export default class HeaderBackground extends Component<Props, State> {
                     <path
                       d={this.state.points[1]}
                       id="Rectangle"
-                      fill="url(#linearGradient-1)"
+                      fill="url(#header-linearGradient-1)"
                     />
                   </g>
                 </g>
