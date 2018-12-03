@@ -96,7 +96,7 @@ export default class Contact extends Component<Props, State> {
           pageType={SEO_PAGE_TYPE.WEBPAGE}
           title="High Street - Contact Us"
           description="High Street - Contact Us"
-          url="http://highstreet.agency"
+          url="https://highstreet.agency"
         />
         <Alert
           title="Thanks!"

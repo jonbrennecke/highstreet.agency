@@ -52,7 +52,7 @@ export default function Head({ schema, title, description, url }: Props) {
       htmlAttributes={{
         lang: 'en',
         itemscope: undefined,
-        itemtype: `http://schema.org/${schema}`,
+        itemtype: `https://schema.org/${schema}`,
       }}
     >
       <meta charSet="utf-8" />

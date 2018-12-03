@@ -28,7 +28,7 @@ export default class Process extends Component<Props> {
           pageType={SEO_PAGE_TYPE.WEBPAGE}
           title="High Street - Our Process"
           description="High Street - Our Process"
-          url="http://highstreet.agency"
+          url="https://highstreet.agency"
         />
         <Header
           className="process-page-header"

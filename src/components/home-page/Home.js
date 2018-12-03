@@ -29,7 +29,7 @@ export default class Home extends Component<Props> {
           pageType={SEO_PAGE_TYPE.WEBPAGE}
           title="High Street"
           description="High Street"
-          url="http://highstreet.agency"
+          url="https://highstreet.agency"
         />
         <HeaderBackground />
         <Header

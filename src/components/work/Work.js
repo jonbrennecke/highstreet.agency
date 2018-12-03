@@ -28,7 +28,7 @@ export default class Work extends Component<Props> {
           pageType={SEO_PAGE_TYPE.WEBPAGE}
           title="High Street - Our Work"
           description="High Street - Our Work"
-          url="http://highstreet.agency"
+          url="https://highstreet.agency"
         />
         <Header
           analytics={this.props.analytics}
