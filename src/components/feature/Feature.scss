@@ -66,4 +66,17 @@
   .feature-heading-container {
     padding-left: 210px;
   }
+
+  @media only screen and (max-width: 1024px) {
+    justify-content: center;
+
+    .feature-image-left, .feature-heading-container {
+      display: none;
+    }
+
+    .feature-background-images {
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
