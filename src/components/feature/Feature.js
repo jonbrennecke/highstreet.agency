@@ -20,16 +20,22 @@ type Props = {
 export default function Feature({ className, id, analytics }: Props) {
   return (
     <aside id={id} className={classnames('feature', className)}>
-      <FeatureLeftSideImage className="" />
-      <FeatureRightSideImage className="" />
-      <h3>Join the amazing companies choosing High Street</h3>
-      <FlatCallToActionLink
-        analytics={analytics}
-        className="feature-call-to-action"
-        name="feature-call-to-action"
-        text="Work with us"
-        to="/contact"
-      />
+      <div className="feature-background-images">
+        <FeatureLeftSideImage className="feature-image-left" />
+        <FeatureRightSideImage className="feature-image-right" />
+      </div>
+      <div className="feature-heading-container">
+        <h3>Join the amazing companies choosing High Street</h3>
+      </div>
+      <div className="feature-link-container">
+        <FlatCallToActionLink
+          analytics={analytics}
+          className="feature-call-to-action"
+          name="feature-call-to-action"
+          text="Work with us"
+          to="/contact"
+        />
+      </div>
     </aside>
   );
 }

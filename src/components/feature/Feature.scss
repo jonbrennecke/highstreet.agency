@@ -6,7 +6,7 @@
   display: flex;
   background-color: $theme-medium-light-blue;
   width: 100%;
-  padding: 45px 100px;
+  height: 155px;
   border-radius: 6px;
   justify-content: space-between;
   align-items: center;
@@ -14,32 +14,56 @@
 
   h3 {
     @include paragraph;
-    white-space: nowrap;
     color: #fff;
-    margin-left: 148px;
+  }
+
+  .feature-background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .feature-image-left, .feature-image-right {
+    display: flex;
+    flex: 1;
+    max-width: 50%;
   }
 
   .feature-image-left {
-    position: absolute;
-    top: 5px;
-    left: 55px;
-    bottom: 5px;
+    margin: 5px -25px 5px 25px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .feature-image-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
-      height: 100%;
+      position: absolute;
+      height: 150%;
       width: auto;
     }
   }
 
-  .feature-image-right {
-    position: absolute;
-    top: -25px;
-    right: -25px;
-    bottom: -25px;
+  .feature-heading-container, .feature-link-container {
+    display: flex;
+    flex: 1;
+    max-width: 50%;
+  }
 
-    img {
-      height: 100%;
-      width: auto;
-    }
+  .feature-link-container {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-heading-container {
+    padding-left: 210px;
   }
 }

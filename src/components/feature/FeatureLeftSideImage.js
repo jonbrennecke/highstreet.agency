@@ -11,8 +11,6 @@ type Props = {
 
 export default function FeatureLeftSideImage({ className, id }: Props) {
   return (
-    <div id={id} className={classnames('feature-image-left', className)}>
-      <img src={DotsImage} />
-    </div>
+    <div id={id} className={classnames('feature-image-left', className)} style={{ backgroundImage: `url(${DotsImage})`}} />
   );
 }
