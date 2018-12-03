@@ -6,6 +6,11 @@
   list-style-type: none;
   flex-direction: row;
   margin: 100px 0 0 0;
+  padding: 0;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .list-item {
     display: flex;
