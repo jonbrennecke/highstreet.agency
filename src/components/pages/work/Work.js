@@ -1,13 +1,13 @@
 /* @flow */
 import React, { Component } from 'react';
 
-import * as Analytics from '../../utils/Analytics';
-import { pageview } from '../../utils/AnalyticsUI';
-import Footer from '../footer/Footer';
-import Header from '../header/Header';
-import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
-import { SEO_PAGE_TYPE } from '../../constants';
-import Seo from '../seo/Seo';
+import * as Analytics from '../../../utils/Analytics';
+import { pageview } from '../../../utils/AnalyticsUI';
+import Footer from '../../footer/Footer';
+import Header from '../../header/Header';
+import ContentMaxWidth from '../../layout/content-max-width/ContentMaxWidth';
+import { SEO_PAGE_TYPE } from '../../../constants';
+import Seo from '../../seo/Seo';
 
 // $FlowFixMe
 import './Work.scss';

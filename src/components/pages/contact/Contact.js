@@ -2,20 +2,20 @@
 import React, { Component } from 'react';
 import { autobind } from 'core-decorators';
 
-import * as Analytics from '../../utils/Analytics';
-import { pageview } from '../../utils/AnalyticsUI';
-import Footer from '../footer/Footer';
-import Header from '../header/Header';
-import { SEO_PAGE_TYPE } from '../../constants';
-import Seo from '../seo/Seo';
-import ContactForm from '../contact-form/ContactForm';
-import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
-import Alert from '../alert/Alert';
+import * as Analytics from '../../../utils/Analytics';
+import { pageview } from '../../../utils/AnalyticsUI';
+import Footer from '../../footer/Footer';
+import Header from '../../header/Header';
+import { SEO_PAGE_TYPE } from '../../../constants';
+import Seo from '../../seo/Seo';
+import ContactForm from '../../contact-form/ContactForm';
+import ContentMaxWidth from '../../layout/content-max-width/ContentMaxWidth';
+import Alert from '../../alert/Alert';
 
 // $FlowFixMe
 import './Contact.scss';
 
-import type { ContactData } from '../contact-form/ContactForm';
+import type { ContactData } from '../../contact-form/ContactForm';
 
 type Props = {
   analytics: Analytics.Analytics,
