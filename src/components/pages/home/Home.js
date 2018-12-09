@@ -33,8 +33,10 @@ export default class Home extends Component<Props> {
         />
         <HeaderBackground />
         <Header
+          className="home-page-header"
           analytics={this.props.analytics}
           headlineText="We create innovative digital products"
+          headlineParagraphText="When you need to launch an app, create an voice interface for Alexa,  or deploy an API, High Street has you covered."
           callToAction={{ text: 'Work with us', pathName: '/contact' }}
         />
         <Body analytics={this.props.analytics} />

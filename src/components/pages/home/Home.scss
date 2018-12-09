@@ -4,4 +4,20 @@
   .header-background {
     background-color: $theme-extra-light-blue;
   }
+
+  .home-page-header {
+    .headline.call-to-action {
+      margin-bottom: 15px;
+    }
+    
+    height: 100vh;
+
+    .call-to-action-link {
+      margin-top: 35px;
+    }
+
+    .headline-paragraph {
+      max-width: 500px;
+    }
+  }
 }
