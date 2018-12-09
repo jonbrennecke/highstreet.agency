@@ -24,7 +24,9 @@
   src: url('assets/fonts/WorkSans/WorkSans-SemiBold.ttf') format('truetype');
   font-style: normal;
   font-weight: bold;
+  font-display: fallback;
 }
 
-$source-sans-pro-font-family: 'Source Sans Pro';
-$work-sans-font-family: 'Work Sans';
+$fallback-font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande';
+$source-sans-pro-font-family: 'Source Sans Pro', $fallback-font-family;
+$work-sans-font-family: 'Work Sans', $fallback-font-family;
