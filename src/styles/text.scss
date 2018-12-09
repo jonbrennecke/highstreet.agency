@@ -13,3 +13,10 @@
     background-color: $theme-extra-light-blue;
   }
 }
+
+@mixin uppercase-style {
+  font-family: $work-sans-font-family;
+  font-weight: lighter;
+  letter-spacing: 2.8pt;
+  text-transform: uppercase;
+}

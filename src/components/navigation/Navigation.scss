@@ -1,4 +1,4 @@
-@import "../../styles/fonts";
+@import "../../styles/text";
 
 .navigation {
   display: flex;
@@ -21,10 +21,10 @@
   }
 
   .nav-link {
-    font-family: $source-sans-pro-font-family;
-    font-weight: lighter;
-    font-size: 12pt;
+    @include uppercase-style;
+    font-size: 10pt;
     color: #fff;
+    font-weight: normal;
     text-decoration: none;
     padding: 45px 20px 0 20px;
     border-top-style: solid;
