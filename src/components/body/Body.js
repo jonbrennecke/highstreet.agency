@@ -14,6 +14,7 @@ import BodyBackground from '../body-background/BodyBackground';
 import Solutions from '../solutions/Solutions';
 import DevelopmentSolutionsList from '../development-solutions-list/DevelopmentSolutionsList';
 import GetStarted from '../get-started/GetStarted';
+import HomePageDescriptionSection from './components/home-page-description-section/HomePageDescriptionSection';
 
 import type { Analytics } from '../../utils/Analytics';
 
@@ -28,17 +29,10 @@ export default function Body({ className, analytics }: Props) {
       <section className={classnames('body-subsection process', className)}>
         <ContentMaxWidth className="process-inner">
           <ScrollIndicator />
-          <div className="below-scroll-content">
-            <Title text="High Street connects startups with digital audiences" />
-            <Subtitle text="We work with startups, founders and enterprise companies to create digital experiences that users love." />
-            <CallToActionLink
-              analytics={analytics}
-              name="Process call-to-action button"
-              text="See our process"
-              to="/process"
-            />
-            <DevelopmentSolutionsList />
-          </div>
+          <HomePageDescriptionSection
+            className="below-scroll-content"
+            analytics={analytics}
+          />
         </ContentMaxWidth>
       </section>
       <section className={classnames('body-subsection solutions', className)}>
