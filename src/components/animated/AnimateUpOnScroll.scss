@@ -3,7 +3,7 @@ $easing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 .animate-up {
   transform: translateY(100px);
   opacity: 0;
-  transition: transform 500ms $easing, opacity 500ms $easing;
+  transition: transform 500ms 100ms $easing, opacity 500ms 100ms $easing;
 
   &.active {
     transform: translateY(0px);
