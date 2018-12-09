@@ -5,12 +5,11 @@ import { autobind } from 'core-decorators';
 
 type WindowScrollCallback = () => void;
 
-// $FlowFixME
+// $FlowFixMe
 @autobind
 class WindowScrollListener {
-  
-  static sharedInstance: ?WindowScrollListener
-  
+  static sharedInstance: ?WindowScrollListener;
+
   isListening: boolean = false;
   updaters: Map<string, WindowScrollUpdater> = new Map();
 
@@ -21,14 +20,14 @@ class WindowScrollListener {
     return WindowScrollListener.sharedInstance;
   }
 
-  startListening(): WindowScrollUpdater {
+startListening() {
     window.addEventListener('scroll', this.handleScrollEvent);
   }
 
   stopListening() {
     window.removeEventListener('scroll', this.handleScrollEvent);
   }
-  
+
   handleScrollEvent() {
     window.requestAnimationFrame(() => {
       this.onWindowDidScroll();
@@ -51,7 +50,7 @@ class WindowScrollListener {
   }
 }
 
-// $FlowFixME
+// $FlowFixMe
 @autobind
 class WindowScrollUpdater {
   callback: WindowScrollCallback;
@@ -71,16 +70,15 @@ class WindowScrollUpdater {
 
 type PassedProps = {};
 
-
-
 export function bindScrollToWindow<Props, State>(
-  WrappedComponent: Class<Component<Props & PassedProps, State> & { onWindowDidScroll: () => void }>
+  // eslint-disable-next-line flowtype/generic-spacing
+  WrappedComponent: Class<
+    Component<Props & PassedProps, State> & { onWindowDidScroll: () => void }
+  >
 ): Class<Component<Props, State>> {
-  
   // $FlowFixMe
   @autobind
   class ComponentWrapper extends Component<Props, State> {
-
     updater: ?WindowScrollUpdater;
     ref: ?WrappedComponent;
 
@@ -95,7 +93,7 @@ export function bindScrollToWindow<Props, State>(
       }
       this.updater.detach();
     }
-            
+
     onWindowDidScroll() {
       if (!this.ref) {
         return;
@@ -104,9 +102,14 @@ export function bindScrollToWindow<Props, State>(
     }
 
     render() {
-      return <WrappedComponent {
-        ...this.props
-      } ref={ref => { this.ref = ref; }} />;
+      return (
+        <WrappedComponent
+          {...this.props}
+          ref={ref => {
+            this.ref = ref;
+          }}
+        />
+      );
     }
   }
 

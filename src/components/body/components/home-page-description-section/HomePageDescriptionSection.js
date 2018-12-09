@@ -20,9 +20,7 @@ export default function HomePageDescriptionSection({
   analytics,
 }: Props) {
   return (
-    <div
-      className={classnames('home-page-description-section', className)}
-    >
+    <div className={classnames('home-page-description-section', className)}>
       <AnimateUpOnScroll>
         <Title text="High Street connects startups with digital audiences" />
       </AnimateUpOnScroll>

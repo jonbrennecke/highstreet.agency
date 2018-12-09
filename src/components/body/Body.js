@@ -6,13 +6,9 @@ import classnames from 'classnames';
 import './Body.scss';
 
 import ContentMaxWidth from '../layout/content-max-width/ContentMaxWidth';
-import Subtitle from '../subtitle/Subtitle';
-import Title from '../title/Title';
-import CallToActionLink from '../call-to-action-link/CallToActionLink';
 import ScrollIndicator from '../scroll-indicator/ScrollIndicator';
 import BodyBackground from '../body-background/BodyBackground';
 import Solutions from '../solutions/Solutions';
-import DevelopmentSolutionsList from '../development-solutions-list/DevelopmentSolutionsList';
 import GetStarted from '../get-started/GetStarted';
 import HomePageDescriptionSection from './components/home-page-description-section/HomePageDescriptionSection';
 

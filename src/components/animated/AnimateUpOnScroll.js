@@ -28,7 +28,7 @@ export default class AnimateUpOnScroll extends Component<Props, State> {
   };
 
   element: ?HTMLDivElement;
-  
+
   onWindowDidScroll() {
     if (!this.element) {
       return;
