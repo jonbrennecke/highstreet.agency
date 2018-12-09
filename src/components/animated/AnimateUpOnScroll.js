@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { autobind } from 'core-decorators';
 
+import { bindScrollToWindow } from '../../utils/Animated';
+
 import type { Children } from '../../types/react';
 
 // $FlowFixMe
@@ -19,28 +21,15 @@ type State = {
 
 // $FlowFixMe
 @autobind
+@bindScrollToWindow
 export default class AnimateUpOnScroll extends Component<Props, State> {
   state = {
     isActive: false,
   };
 
   element: ?HTMLDivElement;
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScrollEvent);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScrollEvent);
-  }
-
-  handleScrollEvent() {
-    window.requestAnimationFrame(() => {
-      this.onScroll();
-    });
-  }
-
-  onScroll() {
+  
+  onWindowDidScroll() {
     if (!this.element) {
       return;
     }
