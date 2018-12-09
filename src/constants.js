@@ -52,3 +52,7 @@ export const SOCIAL_LINKS = {
   YOUTUBE:
     'https://www.youtube.com/channel/UC1IUdHJjVZfXIkpSXB6iRXw?view_as=subscriber',
 };
+
+export const THEME_COLORS = {
+  META_HEAD_COLOR: '#4259D9',
+};

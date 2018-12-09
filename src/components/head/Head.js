@@ -44,9 +44,16 @@ type Props = {
   title: string,
   description: string,
   url: string,
+  themeColor: string,
 };
 
-export default function Head({ schema, title, description, url }: Props) {
+export default function Head({
+  schema,
+  title,
+  description,
+  url,
+  themeColor,
+}: Props) {
   return (
     <Helmet
       htmlAttributes={{
@@ -72,7 +79,7 @@ export default function Head({ schema, title, description, url }: Props) {
       <link rel="canonical" href={url} />
       <title>{title}</title>
 
-      {/* TODO: add header color for chrome: <meta name="theme-color" content="#4285f4"> */}
+      <meta name="theme-color" content={themeColor} />
 
       {/* Allow search engine indexing */}
       <meta name="robots" content="index,follow" />
