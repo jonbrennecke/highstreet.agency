@@ -17,7 +17,10 @@ type Props = {
 import './CaptionThisPrivacyPolicy.scss';
 
 // $FlowFixMe
-@pageview(Analytics.CategoryEnum.CaptionThisPrivacyPolicyPage, 'Caption This - Privacy policy page view')
+@pageview(
+  Analytics.CategoryEnum.CaptionThisPrivacyPolicyPage,
+  'Caption This - Privacy policy page view'
+)
 export default class CaptionThisPrivacyPolicy extends Component<Props> {
   props: Props;
 

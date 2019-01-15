@@ -28,7 +28,11 @@ export default function Routes({ isBrowser }: Props) {
           <Route path="/contact" exact component={Contact} />
           <Route path="/process" exact component={Process} />
           <Route path="/work" exact component={Work} />
-          <Route path="/caption-this/privacy-policy" exact component={CaptionThisPrivacyPolicy} />
+          <Route
+            path="/caption-this/privacy-policy"
+            exact
+            component={CaptionThisPrivacyPolicy}
+          />
         </Fragment>
       </Route>
     </Router>

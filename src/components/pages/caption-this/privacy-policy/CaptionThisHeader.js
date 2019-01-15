@@ -15,12 +15,9 @@ type Props = {
   analytics: Analytics,
 };
 
-export default function CaptionThisHeader({
-  className,
-  analytics,
-}: Props) {
+export default function CaptionThisHeader({ className, analytics }: Props) {
   return (
-    <header className={classnames('header', className)}>
+    <header className={classnames('privacy-policy-header', className)}>
       <ContentMaxWidth className="header-inner">
         <Navigation analytics={analytics} />
       </ContentMaxWidth>
