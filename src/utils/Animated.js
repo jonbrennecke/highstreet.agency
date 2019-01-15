@@ -20,7 +20,7 @@ class WindowScrollListener {
     return WindowScrollListener.sharedInstance;
   }
 
-startListening() {
+  startListening() {
     window.addEventListener('scroll', this.handleScrollEvent);
   }
 

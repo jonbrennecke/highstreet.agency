@@ -1,0 +1,35 @@
+@import "../../../../styles/constants";
+@import "../../../../styles/fonts";
+@import "../../../../styles/text";
+
+.privacy-policy-page {
+  background-color: $theme-dark-purple;
+  
+  .privacy-policy-section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .privacy-policy {
+    @include paragraph;
+    max-width: 100%;
+    color: $theme-white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    a {
+      color: $theme-white;
+      font-weight: bold;
+
+      &:visited {
+        color: $theme-white;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 500px;
+  }
+}

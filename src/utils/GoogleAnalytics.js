@@ -19,6 +19,7 @@ export const CategoryEnum = {
   ContactPage: 'Pages.ContactPage',
   ProcessPage: 'Pages.ProcessPage',
   WorkPage: 'Pages.WorkPage',
+  CaptionThisPrivacyPolicyPage: 'Pages.CaptionThis.PrivacyPolicyPage',
 };
 
 export const ActionEnum = {
