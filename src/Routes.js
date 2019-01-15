@@ -7,6 +7,7 @@ import Home from './components/pages/home/Home';
 import Contact from './components/pages/contact/Contact';
 import Process from './components/pages/process/Process';
 import Work from './components/pages/work/Work';
+import CaptionThisPrivacyPolicy from './components/pages/caption-this/privacy-policy/CaptionThisPrivacyPolicy';
 
 type Props = {
   isBrowser?: boolean,
@@ -27,6 +28,7 @@ export default function Routes({ isBrowser }: Props) {
           <Route path="/contact" exact component={Contact} />
           <Route path="/process" exact component={Process} />
           <Route path="/work" exact component={Work} />
+          <Route path="/caption-this/privacy-policy" exact component={CaptionThisPrivacyPolicy} />
         </Fragment>
       </Route>
     </Router>

@@ -1,0 +1,25 @@
+@import "../../../../styles/constants";
+@import "../../../../styles/fonts";
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 45px 45px 45px;
+  height: 100vh;
+
+  .header-inner {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  }
+
+  .call-to-action {
+    color: $theme-white;
+    max-width: 800px;
+
+    &::selection {
+      background-color: $theme-medium-magenta;
+    }
+  }
+}
