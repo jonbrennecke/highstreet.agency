@@ -8,6 +8,7 @@ import Contact from './components/pages/contact/Contact';
 import Process from './components/pages/process/Process';
 import Work from './components/pages/work/Work';
 import CaptionThisPrivacyPolicy from './components/pages/caption-this/privacy-policy/CaptionThisPrivacyPolicy';
+import BocaPrivacyPolicy from './components/pages/boca/privacy-policy/BocaPrivacyPolicy';
 
 type Props = {
   isBrowser?: boolean,
@@ -32,6 +33,11 @@ export default function Routes({ isBrowser }: Props) {
             path="/caption-this/privacy-policy"
             exact
             component={CaptionThisPrivacyPolicy}
+          />
+          <Route
+            path="/boca/privacy-policy"
+            exact
+            component={BocaPrivacyPolicy}
           />
         </Fragment>
       </Route>
