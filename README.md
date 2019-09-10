@@ -1,4 +1,4 @@
-Blog
+Highstreet
 ---------------
 
 Usage
@@ -9,6 +9,8 @@ Usage
 To start the local front-end server.
 
 ```bash
+nvm use
+npm i
 npm run develop
 open http://localhost:3000
 ```
