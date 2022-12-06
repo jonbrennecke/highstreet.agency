@@ -84,7 +84,7 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-react": "^7.7.0",
-    "express": "4.14.0",
+    "express": "4.17.3",
     "file-loader": "2.0.0",
     "firebase-tools": "6.1.1",
     "flow-bin": "0.66.0",
